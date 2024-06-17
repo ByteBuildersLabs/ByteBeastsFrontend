@@ -211,6 +211,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114767406652574682, guid: 494c39af6c9b11a44a14f6a64e53cb40,
+        type: 3}
+      propertyPath: chanceToFlee
+      value: 55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17665,7 +17670,7 @@ MonoBehaviour:
   activateOnEnter: 0
   activateOnStay: 1
   activateOnExit: 0
-  timeBetweenBattles: 4
+  timeBetweenBattles: 9
   deactivateAfterStarting: 0
   cannotFlee: 0
   shouldCompleteQuest: 0
