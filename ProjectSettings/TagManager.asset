@@ -56,3 +56,6 @@ TagManager:
   - name: cave
     uniqueID: 260018825
     locked: 0
+  - name: MobileButtons
+    uniqueID: 3192607739
+    locked: 0
