@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle_Izquierda
+  m_Name: PersonajeDerrotado
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 28802822, guid: 89904dcd30b5b33489ddfdbe340b52af, type: 3}
+      value: {fileID: 1583346734, guid: 8c4ab48fb2fad2a459bf7dd4feb04714, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 28802822, guid: 89904dcd30b5b33489ddfdbe340b52af, type: 3}
+    - {fileID: 1583346734, guid: 8c4ab48fb2fad2a459bf7dd4feb04714, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

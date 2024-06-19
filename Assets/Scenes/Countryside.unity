@@ -325,7 +325,7 @@ Transform:
   m_GameObject: {fileID: 49203840}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.030000476, y: -0.05999988, z: -10}
+  m_LocalPosition: {x: -0.030000238, y: -0.05999988, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2190,7 +2190,7 @@ GameObject:
   - component: {fileID: 840428953}
   - component: {fileID: 840428952}
   m_Layer: 0
-  m_Name: GreenNinja
+  m_Name: Mike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2299,7 +2299,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.9375, y: 1.375}
     newSize: {x: 0.16, y: 0.16}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2370,7 +2370,7 @@ SpriteRenderer:
   m_SortingLayerID: -264694255
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 200420698, guid: 72ab3b265cc078247a59d09d44368b4b, type: 3}
+  m_Sprite: {fileID: 1484357412, guid: 8c4ab48fb2fad2a459bf7dd4feb04714, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -27399,7 +27399,7 @@ Transform:
   m_GameObject: {fileID: 1808672556}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.030000476, y: -0.05999988, z: -10}
+  m_LocalPosition: {x: -0.030000238, y: -0.05999988, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
