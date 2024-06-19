@@ -1,1 +1,0 @@
-# StarkHack2024FrontEnd

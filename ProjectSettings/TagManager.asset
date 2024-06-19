@@ -42,20 +42,11 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 2087213285
+    uniqueID: 3584387727
+    locked: 0
+  - name: Cave
+    uniqueID: 963687727
     locked: 0
   - name: Player
-    uniqueID: 4218774275
-    locked: 0
-  - name: Battle BG
-    uniqueID: 3525323429
-    locked: 0
-  - name: Battle Chars
-    uniqueID: 971942665
-    locked: 0
-  - name: cave
-    uniqueID: 260018825
-    locked: 0
-  - name: MobileButtons
-    uniqueID: 3192607739
+    uniqueID: 4030273041
     locked: 0
