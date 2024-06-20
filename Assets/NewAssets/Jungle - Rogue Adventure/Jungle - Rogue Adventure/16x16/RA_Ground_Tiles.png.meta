@@ -1,0 +1,607 @@
+fileFormatVersion: 2
+guid: dabb9913788591c419a45575d56a6ddc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_67
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada803840e835cf4ba6e2b06ec644f48
+      internalID: -1230656733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_70
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc4b42bd057ab0040b6f66b1d8ece7b0
+      internalID: -1892066468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_73
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e67b66d2371df041ac05a4abf7a260e
+      internalID: -1572712155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_76
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d54633d86da4434ba96a3a81cec874f
+      internalID: -512946986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_79
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8b8902a062a2d4b99a210acbe48903
+      internalID: 1461169062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_82
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59bb808bb1cf2f4a90727815f062194
+      internalID: -1269439480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_181
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc44e994a178d3a4e80b514637840dcd
+      internalID: -820560836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_184
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daaee874e4a250847b487dffacc3caa5
+      internalID: 162391478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_187
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d549e75931d69f142bcec1ec55fb6518
+      internalID: -443097595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_190
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111fe4e32d4d6bb42a4a103f18865089
+      internalID: 2120244972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_193
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abbd736e1991d8c4f997ff2e6fa04a77
+      internalID: 2067250254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RA_Ground_Tiles_196
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484f8bbda24a28749ad106e8ce6b4c7a
+      internalID: -1587047025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RA_Ground_Tiles_0: -829611967
+      RA_Ground_Tiles_1: -573736593
+      RA_Ground_Tiles_10: 2119831899
+      RA_Ground_Tiles_100: -169276134
+      RA_Ground_Tiles_101: 1530530751
+      RA_Ground_Tiles_102: 1816627655
+      RA_Ground_Tiles_103: 809482085
+      RA_Ground_Tiles_104: 332983642
+      RA_Ground_Tiles_105: 2108850941
+      RA_Ground_Tiles_106: -1078364519
+      RA_Ground_Tiles_107: 1090166061
+      RA_Ground_Tiles_108: -856522300
+      RA_Ground_Tiles_109: -139893359
+      RA_Ground_Tiles_11: 1258900159
+      RA_Ground_Tiles_110: -1490615869
+      RA_Ground_Tiles_111: 978181521
+      RA_Ground_Tiles_112: 595585775
+      RA_Ground_Tiles_113: -1461586537
+      RA_Ground_Tiles_114: -770709346
+      RA_Ground_Tiles_115: -813884484
+      RA_Ground_Tiles_116: -365044179
+      RA_Ground_Tiles_117: 1485508220
+      RA_Ground_Tiles_118: -1209397647
+      RA_Ground_Tiles_119: 1381617569
+      RA_Ground_Tiles_12: 78371049
+      RA_Ground_Tiles_120: -2047061904
+      RA_Ground_Tiles_121: -1080442133
+      RA_Ground_Tiles_122: 618811151
+      RA_Ground_Tiles_123: -223803247
+      RA_Ground_Tiles_124: 857776332
+      RA_Ground_Tiles_125: -384538584
+      RA_Ground_Tiles_126: 186754366
+      RA_Ground_Tiles_127: -610743629
+      RA_Ground_Tiles_128: 2042388448
+      RA_Ground_Tiles_129: -1352729746
+      RA_Ground_Tiles_13: -1583910579
+      RA_Ground_Tiles_130: -751725996
+      RA_Ground_Tiles_131: 636539366
+      RA_Ground_Tiles_132: 299939693
+      RA_Ground_Tiles_133: -1092909754
+      RA_Ground_Tiles_134: 2069162361
+      RA_Ground_Tiles_135: -421375651
+      RA_Ground_Tiles_136: -1897165186
+      RA_Ground_Tiles_137: -1925243516
+      RA_Ground_Tiles_138: 1048135113
+      RA_Ground_Tiles_139: 186756001
+      RA_Ground_Tiles_14: 1587679035
+      RA_Ground_Tiles_140: 2029473898
+      RA_Ground_Tiles_141: 473964582
+      RA_Ground_Tiles_142: -898600119
+      RA_Ground_Tiles_143: 1740130400
+      RA_Ground_Tiles_144: -1413232774
+      RA_Ground_Tiles_145: -439501323
+      RA_Ground_Tiles_146: -58981405
+      RA_Ground_Tiles_147: -1857819346
+      RA_Ground_Tiles_148: -1518972032
+      RA_Ground_Tiles_149: -398367622
+      RA_Ground_Tiles_15: -323763828
+      RA_Ground_Tiles_150: 1458678923
+      RA_Ground_Tiles_151: 1545510794
+      RA_Ground_Tiles_152: 902062360
+      RA_Ground_Tiles_153: -1390189120
+      RA_Ground_Tiles_154: -2070293278
+      RA_Ground_Tiles_155: 13371766
+      RA_Ground_Tiles_156: -859976616
+      RA_Ground_Tiles_157: 295235822
+      RA_Ground_Tiles_158: 1136331585
+      RA_Ground_Tiles_159: 1422198642
+      RA_Ground_Tiles_16: -567062747
+      RA_Ground_Tiles_160: 986661343
+      RA_Ground_Tiles_161: -1367381055
+      RA_Ground_Tiles_162: 219199014
+      RA_Ground_Tiles_163: -2146940388
+      RA_Ground_Tiles_164: -1177875103
+      RA_Ground_Tiles_165: -1761260930
+      RA_Ground_Tiles_166: 1438006658
+      RA_Ground_Tiles_167: -566421684
+      RA_Ground_Tiles_168: 984507153
+      RA_Ground_Tiles_169: 1677576330
+      RA_Ground_Tiles_17: 16303059
+      RA_Ground_Tiles_170: 1556131672
+      RA_Ground_Tiles_171: 1819674899
+      RA_Ground_Tiles_172: -1027531086
+      RA_Ground_Tiles_173: 2072626997
+      RA_Ground_Tiles_174: 1503234575
+      RA_Ground_Tiles_175: -1402227842
+      RA_Ground_Tiles_176: 1617252392
+      RA_Ground_Tiles_177: -1872630507
+      RA_Ground_Tiles_178: -941176789
+      RA_Ground_Tiles_179: -1639567579
+      RA_Ground_Tiles_18: 2051451306
+      RA_Ground_Tiles_180: -374953009
+      RA_Ground_Tiles_181: -820560836
+      RA_Ground_Tiles_182: -1512438535
+      RA_Ground_Tiles_183: 1741927190
+      RA_Ground_Tiles_184: 162391478
+      RA_Ground_Tiles_185: -1448360997
+      RA_Ground_Tiles_186: -600979626
+      RA_Ground_Tiles_187: -443097595
+      RA_Ground_Tiles_188: -1518798868
+      RA_Ground_Tiles_189: 1451773597
+      RA_Ground_Tiles_19: 30044128
+      RA_Ground_Tiles_190: 2120244972
+      RA_Ground_Tiles_191: 2088391346
+      RA_Ground_Tiles_192: -25518527
+      RA_Ground_Tiles_193: 2067250254
+      RA_Ground_Tiles_194: 1617088828
+      RA_Ground_Tiles_195: 1745761645
+      RA_Ground_Tiles_196: -1587047025
+      RA_Ground_Tiles_197: -1414318737
+      RA_Ground_Tiles_198: 1358747435
+      RA_Ground_Tiles_199: -1068160647
+      RA_Ground_Tiles_2: 1989473513
+      RA_Ground_Tiles_20: 1113302587
+      RA_Ground_Tiles_200: -1384242395
+      RA_Ground_Tiles_201: -964516494
+      RA_Ground_Tiles_202: 1705968389
+      RA_Ground_Tiles_203: -281353347
+      RA_Ground_Tiles_204: 2008484639
+      RA_Ground_Tiles_205: -1901760588
+      RA_Ground_Tiles_206: 1950490666
+      RA_Ground_Tiles_207: -720567359
+      RA_Ground_Tiles_208: 663110974
+      RA_Ground_Tiles_209: 1899606804
+      RA_Ground_Tiles_21: -282554324
+      RA_Ground_Tiles_210: 984440798
+      RA_Ground_Tiles_211: 1173783729
+      RA_Ground_Tiles_212: -241606847
+      RA_Ground_Tiles_213: -224059348
+      RA_Ground_Tiles_214: -1449448616
+      RA_Ground_Tiles_215: -1373570715
+      RA_Ground_Tiles_216: 313743538
+      RA_Ground_Tiles_217: -1155068189
+      RA_Ground_Tiles_218: 887968275
+      RA_Ground_Tiles_219: 590911333
+      RA_Ground_Tiles_22: -2058556770
+      RA_Ground_Tiles_220: -1952463469
+      RA_Ground_Tiles_221: -5884419
+      RA_Ground_Tiles_222: -1776000151
+      RA_Ground_Tiles_223: 1634923349
+      RA_Ground_Tiles_224: -627290325
+      RA_Ground_Tiles_225: -1979795478
+      RA_Ground_Tiles_226: -719447106
+      RA_Ground_Tiles_227: -2068536158
+      RA_Ground_Tiles_23: -2136769302
+      RA_Ground_Tiles_24: 1586647682
+      RA_Ground_Tiles_25: 183998000
+      RA_Ground_Tiles_26: 149311917
+      RA_Ground_Tiles_27: 216897847
+      RA_Ground_Tiles_28: 1198126965
+      RA_Ground_Tiles_29: 1693603740
+      RA_Ground_Tiles_3: 1284054886
+      RA_Ground_Tiles_30: -615229730
+      RA_Ground_Tiles_31: 222838035
+      RA_Ground_Tiles_32: -702705316
+      RA_Ground_Tiles_33: -985262870
+      RA_Ground_Tiles_34: -1308565833
+      RA_Ground_Tiles_35: 1359750300
+      RA_Ground_Tiles_36: 330231760
+      RA_Ground_Tiles_37: 1702742317
+      RA_Ground_Tiles_38: 438262654
+      RA_Ground_Tiles_39: 1113074342
+      RA_Ground_Tiles_4: 1076376533
+      RA_Ground_Tiles_40: 1278150577
+      RA_Ground_Tiles_41: 1790307214
+      RA_Ground_Tiles_42: -30459953
+      RA_Ground_Tiles_43: -817516615
+      RA_Ground_Tiles_44: 1727538245
+      RA_Ground_Tiles_45: 1718150983
+      RA_Ground_Tiles_46: 1738449725
+      RA_Ground_Tiles_47: -425682883
+      RA_Ground_Tiles_48: -1647677172
+      RA_Ground_Tiles_49: -736611127
+      RA_Ground_Tiles_5: -956163587
+      RA_Ground_Tiles_50: 1347003590
+      RA_Ground_Tiles_51: -1033173489
+      RA_Ground_Tiles_52: -1274681111
+      RA_Ground_Tiles_53: 1964547314
+      RA_Ground_Tiles_54: 356906389
+      RA_Ground_Tiles_55: -726073921
+      RA_Ground_Tiles_56: -2029361059
+      RA_Ground_Tiles_57: -539678174
+      RA_Ground_Tiles_58: 1822893359
+      RA_Ground_Tiles_59: 1354492373
+      RA_Ground_Tiles_6: 1611096671
+      RA_Ground_Tiles_60: -2011497621
+      RA_Ground_Tiles_61: -346377755
+      RA_Ground_Tiles_62: -1215012353
+      RA_Ground_Tiles_63: 1378133306
+      RA_Ground_Tiles_64: 1128617330
+      RA_Ground_Tiles_65: 1511691533
+      RA_Ground_Tiles_66: -1565496211
+      RA_Ground_Tiles_67: -1230656733
+      RA_Ground_Tiles_68: 789054044
+      RA_Ground_Tiles_69: -1504950307
+      RA_Ground_Tiles_7: 1399166177
+      RA_Ground_Tiles_70: -1892066468
+      RA_Ground_Tiles_71: -819510200
+      RA_Ground_Tiles_72: 1792156001
+      RA_Ground_Tiles_73: -1572712155
+      RA_Ground_Tiles_74: -1013698702
+      RA_Ground_Tiles_75: 1459484815
+      RA_Ground_Tiles_76: -512946986
+      RA_Ground_Tiles_77: -1087361941
+      RA_Ground_Tiles_78: 1227478415
+      RA_Ground_Tiles_79: 1461169062
+      RA_Ground_Tiles_8: -1983675114
+      RA_Ground_Tiles_80: -1232838401
+      RA_Ground_Tiles_81: -942007681
+      RA_Ground_Tiles_82: -1269439480
+      RA_Ground_Tiles_83: 290757093
+      RA_Ground_Tiles_84: 1967586656
+      RA_Ground_Tiles_85: -570742656
+      RA_Ground_Tiles_86: 152044794
+      RA_Ground_Tiles_87: -239037944
+      RA_Ground_Tiles_88: 1801829787
+      RA_Ground_Tiles_89: 37992859
+      RA_Ground_Tiles_9: 52116993
+      RA_Ground_Tiles_90: -1121290783
+      RA_Ground_Tiles_91: -1843279213
+      RA_Ground_Tiles_92: 2101816473
+      RA_Ground_Tiles_93: -404216787
+      RA_Ground_Tiles_94: 1710842889
+      RA_Ground_Tiles_95: -76100156
+      RA_Ground_Tiles_96: 2089281917
+      RA_Ground_Tiles_97: 1556074250
+      RA_Ground_Tiles_98: -123931066
+      RA_Ground_Tiles_99: -56598752
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
