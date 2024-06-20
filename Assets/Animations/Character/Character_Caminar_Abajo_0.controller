@@ -139,7 +139,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GreenNinja_Caminar_Abajo_0
+  m_Name: Character_Caminar_Abajo_0
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: X
