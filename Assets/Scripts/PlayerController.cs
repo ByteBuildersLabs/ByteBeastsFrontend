@@ -37,11 +37,11 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        //float horizontal = Input.GetAxisRaw("Horizontal");
-        //float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
-        float horizontal = joystick.Horizontal;
-        float vertical = joystick.Vertical;
+        //float horizontal = joystick.Horizontal;
+        //float vertical = joystick.Vertical;
 
         if (canMove)
         {
