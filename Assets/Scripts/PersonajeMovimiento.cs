@@ -13,6 +13,8 @@ public class PersonajeMovimiento : MonoBehaviour
 
     [SerializeField] Joystick joystick;
 
+    public string transitionName; // Added this line to store the transition name
+
     public Vector2 GetDireccionMovimiento => _direccionMovimiento;
 
     public bool EnMovimiento => _direccionMovimiento.magnitude > 0f;
@@ -22,54 +24,45 @@ public class PersonajeMovimiento : MonoBehaviour
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        // Initialize transitionName if needed
+        // transitionName = "YourInitialTransitionName";
     }
 
-    // Update is called once per frame
     void Update()
     {   
-
-        //float horizontal = Input.GetAxisRaw("Horizontal");
-        //float vertical = Input.GetAxisRaw("Vertical");
-
         float horizontal = joystick.Horizontal;
         float vertical = joystick.Vertical;
 
         _input = new Vector2(x:horizontal, y:vertical);
 
-        // Direcciones con X
-        
-        if (_input.x > 0.1f) //si el input es mayor a 0.1f entonces se mueve a la derecha
+        if (_input.x > 0.1f)
         {
             _direccionMovimiento.x = 1f;
         }
-        else if (_input.x < 0f) //si el input es menor a 0 entonces se mueve a la izquierda
+        else if (_input.x < 0f)
         {
             _direccionMovimiento.x = -1f;
         }
-        else{ //no se mueve horizontalmente
+        else
+        {
             _direccionMovimiento.x = 0f;
         }
 
-        //Direcciones con Y
-
-        if (_input.y > 0.1f) //si el input es mayor a 0.1f entonces se mueve a hacia arriba
+        if (_input.y > 0.1f)
         {
             _direccionMovimiento.y = 1f;
         }
-        else if (_input.y < 0f) //si el input es menor a 0 entonces se mueve hacia abajo
+        else if (_input.y < 0f)
         {
             _direccionMovimiento.y = -1f;
         }
-        else{ //no se mueve verticalmente
+        else
+        {
             _direccionMovimiento.y = 0f;
         }
     }
-
-    //para mover al personaje
 
     private void FixedUpdate()
     {
