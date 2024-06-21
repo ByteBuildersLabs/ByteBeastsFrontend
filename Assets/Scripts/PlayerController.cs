@@ -39,7 +39,11 @@ public class PlayerController : MonoBehaviour {
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+#if UNITY_ANDROID
+        horizontal = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FixedJoystick>().Horizontal;
+        vertical = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FixedJoystick>().Vertical;
 
+#endif
         //float horizontal = joystick.Horizontal;
         //float vertical = joystick.Vertical;
 
