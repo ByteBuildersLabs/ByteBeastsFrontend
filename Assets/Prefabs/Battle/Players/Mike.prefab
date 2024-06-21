@@ -98,11 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
-  movesAvailable:
-  - Fire
-  - Ice
+  movesAvailable: []
   charName: Tim
-  currentHp: 100
+  currentHp: 0
   maxHP: 0
   currentMP: 0
   maxMP: 0
