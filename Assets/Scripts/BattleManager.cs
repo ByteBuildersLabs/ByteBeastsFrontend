@@ -88,6 +88,7 @@ public class BattleManager : MonoBehaviour {
 
     public void BattleStart(string[] enemiesToSpawn, bool setCannotFlee)
     {
+        PlayerController.instance.ActivateJoystick(false);
         if(!battleActive)
         {
             cannotFlee = setCannotFlee;
@@ -425,6 +426,7 @@ public class BattleManager : MonoBehaviour {
 
     public IEnumerator EndBattleCo()
     {
+        PlayerController.instance.ActivateJoystick(true);
         battleActive = false;
         uiButtonsHolder.SetActive(false);
         targetMenu.SetActive(false);

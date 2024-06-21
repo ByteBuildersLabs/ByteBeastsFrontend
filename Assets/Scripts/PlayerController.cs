@@ -15,15 +15,18 @@ public class PlayerController : MonoBehaviour {
     private Vector3 bottomLeftLimit;
     private Vector3 topRightLimit;
 
-    [SerializeField] Joystick joystick;
+    FixedJoystick joystick;
 
     public bool canMove = true;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+
+    private void Awake()
+    {
         if (instance == null)
         {
             instance = this;
-        } else
+        }
+        else
         {
             if (instance != this)
             {
@@ -32,16 +35,29 @@ public class PlayerController : MonoBehaviour {
         }
 
         DontDestroyOnLoad(gameObject);
+    }
+
+    void Start () {
+        joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FixedJoystick>();
+
+#if UNITY_STANDALONE_WIN
+        joystick.gameObject.SetActive(false);
+#endif
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+ 
+
+
 
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-#if UNITY_ANDROID
-        horizontal = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FixedJoystick>().Horizontal;
-        vertical = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FixedJoystick>().Vertical;
+#if UNITY_ANDROID || UNITY_IOS
+        
+        horizontal = joystick.Horizontal;
+        vertical = joystick.Vertical;
 
 #endif
         //float horizontal = joystick.Horizontal;
@@ -76,5 +92,12 @@ public class PlayerController : MonoBehaviour {
     {
         bottomLeftLimit = botLeft + new Vector3(.5f, 1f, 0f);
         topRightLimit = topRight + new Vector3(-.5f, -1f, 0f);
+    }
+
+    public void ActivateJoystick(bool val)
+    {
+#if UNITY_ANDROID || UNITY_IOS 
+        joystick.gameObject.SetActive(val);
+#endif
     }
 }

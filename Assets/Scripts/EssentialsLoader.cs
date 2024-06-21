@@ -11,7 +11,7 @@ public class EssentialsLoader : MonoBehaviour {
     public GameObject battleMan;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		if(UIFade.instance == null)
         {
             UIFade.instance = Instantiate(UIScreen).GetComponent<UIFade>();
