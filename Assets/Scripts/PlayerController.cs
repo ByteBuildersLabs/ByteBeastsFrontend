@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isMoving = false;
 
-    private void Awake()
+    private async void Awake()
     {
         if (instance == null)
         {
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void Start()
+    async void Start()
     {
         provider = new JsonRpcClient(dojoConfig.rpcUrl);
         masterAccount = new Account(provider, new SigningKey(gameManagerData.masterPrivateKey), new FieldElement(gameManagerData.masterAddress));
@@ -68,6 +68,9 @@ public class PlayerController : MonoBehaviour
         #if UNITY_STANDALONE_WIN
             joystick.gameObject.SetActive(false);
         #endif
+
+        Task spawning = actions.spawn(masterAccount);
+        StartCoroutine(DoSpawn(spawning));
     }
 
     // Update is called once per frame
@@ -152,6 +155,15 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("Move completed");
             }
             isMoving = false;
+        }
+
+    private IEnumerator DoSpawn(Task task)
+        {
+            yield return new WaitUntil(() => task.IsCompleted);
+            if (task.IsCompletedSuccessfully)
+            {
+                Debug.Log("Move completed");
+            }
         }
     public void ActivateJoystick(bool val)
     {

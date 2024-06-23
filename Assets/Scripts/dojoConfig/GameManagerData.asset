@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 383d2b450adbb055b96dab4340377ead, type: 3}
   m_Name: GameManagerData
   m_EditorClassIdentifier: 
-  masterPrivateKey: 0x2bbf4f9fd0bbb2e60b0316c1fe0b76cf7a4d0198bd493ced9b8df2a3a24d68a
-  masterAddress: 0xb3ff441a68610b30fd5e2abbf3a1548eb6ba6f3559f2862bf2dc757e5828ca
+  masterPrivateKey: 0x4710e214ec335128592d179195a0b52a641d32bdb780803f30f6ee5805783c4
+  masterAddress: 0x69562e297da25abcc1fd34e53b4a534e939fcc445f946e8d8d2bcb3e0e44e44
