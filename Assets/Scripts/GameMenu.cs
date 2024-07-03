@@ -63,24 +63,26 @@ public class GameMenu : MonoBehaviour {
     public void UpdateMainStats()
     {
         playerStats = GameManager.instance.playerStats;
-
+        int nonActiveChar = 0;
         for(int i = 0; i < playerStats.Length; i++)
         {
-            if(playerStats[i].gameObject.activeInHierarchy)
+            if(playerStats[i].gameObject.activeInHierarchy && playerStats[i].charName != "Tim")
             {
-                charStatHolder[i].SetActive(true);
-
-                nameText[i].text = playerStats[i].charName;
-                hpText[i].text = "HP: " + playerStats[i].currentHP + "/" + playerStats[i].maxHP;
-                mpText[i].text = "MP: " + playerStats[i].currentMP + "/" + playerStats[i].maxMP;
-                lvlText[i].text = "Lvl: " + playerStats[i].playerLevel;
-                expText[i].text = "" + playerStats[i].currentEXP + "/" + playerStats[i].expToNextLevel[playerStats[i].playerLevel];
-                expSlider[i].maxValue = playerStats[i].expToNextLevel[playerStats[i].playerLevel];
-                expSlider[i].value = playerStats[i].currentEXP;
-                charImage[i].sprite = playerStats[i].charIamge;
+                charStatHolder[i-nonActiveChar].SetActive(true);
+                Debug.Log("Showing stats for: " + playerStats[i].charName);
+                nameText[i-nonActiveChar].text = playerStats[i].charName;
+                hpText[i - nonActiveChar].text = "HP: " + playerStats[i].currentHP + "/" + playerStats[i].maxHP;
+                mpText[i - nonActiveChar].text = "MP: " + playerStats[i].currentMP + "/" + playerStats[i].maxMP;
+                lvlText[i - nonActiveChar].text = "Lvl: " + playerStats[i].playerLevel;
+                expText[i - nonActiveChar].text = "" + playerStats[i].currentEXP + "/" + playerStats[i].expToNextLevel[playerStats[i].playerLevel];
+                expSlider[i - nonActiveChar].maxValue = playerStats[i].expToNextLevel[playerStats[i].playerLevel];
+                expSlider[i - nonActiveChar].value = playerStats[i].currentEXP;
+                charImage[i - nonActiveChar].sprite = playerStats[i].charIamge;
             } else
             {
+                Debug.Log("Disabled Stats :" + nameText[i].text);
                 charStatHolder[i].SetActive(false);
+                nonActiveChar++;
             }
         }
 
@@ -124,13 +126,18 @@ public class GameMenu : MonoBehaviour {
         UpdateMainStats();
 
         //update the information that is shown
-        StatusChar(0);
+        List<int> activeButtons = new List<int>();
 
         for(int i = 0; i < statusButtons.Length; i++)
         {
-            statusButtons[i].SetActive(playerStats[i].gameObject.activeInHierarchy);
+            statusButtons[i].SetActive(playerStats[i].gameObject.activeInHierarchy && playerStats[i].charName != "Tim");
+            if (statusButtons[i].activeInHierarchy)
+            {
+                activeButtons.Add(i);
+            }
             statusButtons[i].GetComponentInChildren<Text>().text = playerStats[i].charName;
         }
+        StatusChar(activeButtons[0]);
     }
 
     public void StatusChar(int selected)
@@ -237,8 +244,11 @@ public class GameMenu : MonoBehaviour {
 
     public void QuitGame()
     {
-        SceneManager.LoadScene(mainMenuName);
 
+
+        SceneManager.LoadSceneAsync(mainMenuName);
+
+        Destroy(BattleManager.instance.gameObject);
         Destroy(GameManager.instance.gameObject);
         Destroy(PlayerController.instance.gameObject);
         Destroy(AudioManager.instance.gameObject);

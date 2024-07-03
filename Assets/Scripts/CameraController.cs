@@ -34,6 +34,7 @@ public class CameraController : MonoBehaviour {
 	
 	// LateUpdate is called once per frame after Update
 	void LateUpdate () {
+        if(target)
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
 
         //keep the camera inside the bounds
