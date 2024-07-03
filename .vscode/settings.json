@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "StarkHack2024FrontEndv2.sln"
+    "dotnet.defaultSolution": "ByteBeastsFrontend.sln"
 }
