@@ -102,35 +102,42 @@ public class BattleManager : MonoBehaviour {
 
             AudioManager.instance.PlayBGM(0);
 
-            for(int i = 0; i < playerPositions.Length; i++)
+            for(int i = 0; i < playerPositions.Length; i++)//for no of players to spawn
             {
-                if(GameManager.instance.playerStats[i].gameObject.activeInHierarchy)
+                if(GameManager.instance.playerStats[i].gameObject.activeInHierarchy)//if the playerstats available/active
                 {
-                    for(int j = 0; j < playerPrefabs.Length; j++)
+                    for(int j = 0; j < playerPrefabs.Length; j++)//for all characters available for player
                     {
-                        if(playerPrefabs[j].charName == GameManager.instance.playerStats[i].charName)
+                        if(playerPrefabs[j].charName == GameManager.instance.playerStats[i].charName)//when the desired character prefab is found
                         {
+                            Debug.Log("Spawning :" + playerPrefabs[j].charName);
+                           
                             BattleChar newPlayer = Instantiate(playerPrefabs[j], playerPositions[i].position, playerPositions[i].rotation);
                             newPlayer.transform.parent = playerPositions[i];
-                            activeBattlers.Add(newPlayer);
+                            if (playerPrefabs[j].charName != "Tim")
+                            {
+                                activeBattlers.Add(newPlayer);
+                                int noOfBattlers = activeBattlers.Count - 1;
 
-
-                            CharStats thePlayer = GameManager.instance.playerStats[i];
-                            activeBattlers[i].currentHp = thePlayer.currentHP;
-                            activeBattlers[i].maxHP = thePlayer.maxHP;
-                            activeBattlers[i].currentMP = thePlayer.currentMP;
-                            activeBattlers[i].maxMP = thePlayer.maxMP;
-                            activeBattlers[i].strength = thePlayer.strength;
-                            activeBattlers[i].defence = thePlayer.defence;
-                            activeBattlers[i].wpnPower = thePlayer.wpnPwr;
-                            activeBattlers[i].armrPower = thePlayer.armrPwr;
+                                CharStats thePlayer = GameManager.instance.playerStats[i];
+                                activeBattlers[noOfBattlers].currentHp = thePlayer.currentHP;
+                                activeBattlers[noOfBattlers].maxHP = thePlayer.maxHP;
+                                activeBattlers[noOfBattlers].currentMP = thePlayer.currentMP;
+                                activeBattlers[noOfBattlers].maxMP = thePlayer.maxMP;
+                                activeBattlers[noOfBattlers].strength = thePlayer.strength;
+                                activeBattlers[noOfBattlers].defence = thePlayer.defence;
+                                activeBattlers[noOfBattlers].wpnPower = thePlayer.wpnPwr;
+                                activeBattlers[noOfBattlers].armrPower = thePlayer.armrPwr;
+                            }
+                            
+                            
                         }
                     }
 
 
                 }
             }
-
+            //spawning enemies
             for (int i = 0; i < enemiesToSpawn.Length; i++)
             {
                 if (enemiesToSpawn[i] != "")
@@ -235,7 +242,7 @@ public class BattleManager : MonoBehaviour {
     public IEnumerator EnemyMoveCo()
     {
         turnWaiting = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         EnemyAttack();
         yield return new WaitForSeconds(1f);
         NextTurn();
@@ -426,6 +433,7 @@ public class BattleManager : MonoBehaviour {
 
     public IEnumerator EndBattleCo()
     {
+        Debug.Log("Ending battle");
         PlayerController.instance.ActivateJoystick(true);
         battleActive = false;
         uiButtonsHolder.SetActive(false);
