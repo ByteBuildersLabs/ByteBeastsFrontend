@@ -30,7 +30,6 @@ public class GameMenu : MonoBehaviour {
     public Text[] itemCharChoiceNames;
 
     public static GameMenu instance;
-    public Text goldText;
 
     public string mainMenuName;
 
@@ -85,8 +84,6 @@ public class GameMenu : MonoBehaviour {
                 nonActiveChar++;
             }
         }
-
-        goldText.text = GameManager.instance.currentGold.ToString() + "g";
     }
 
     public void ToggleWindow(int windowNumber)
@@ -244,8 +241,6 @@ public class GameMenu : MonoBehaviour {
 
     public void QuitGame()
     {
-
-
         SceneManager.LoadSceneAsync(mainMenuName);
 
         Destroy(BattleManager.instance.gameObject);
