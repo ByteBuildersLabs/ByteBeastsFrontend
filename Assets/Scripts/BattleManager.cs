@@ -3,74 +3,84 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Dojo;
+using Dojo.Starknet;
+using dojo_bindings;
+using System.Threading.Tasks;
 
-public class BattleManager : MonoBehaviour {
+
+public class BattleManager : MonoBehaviour
+{
 
     public static BattleManager instance;
-
     private bool battleActive;
-
     public GameObject battleScene;
-
     public Transform[] playerPositions;
     public Transform[] enemyPositions;
-
     public BattleChar[] playerPrefabs;
     public BattleChar[] enemyPrefabs;
-
     public List<BattleChar> activeBattlers = new List<BattleChar>();
-
     public int currentTurn;
     public bool turnWaiting;
-
     public GameObject uiButtonsHolder;
-
     public BattleMove[] movesList;
     public GameObject enemyAttackEffect;
-
     public DamageNumber theDamageNumber;
-
     public Text[] playerName, playerHP, playerMP;
-
     public GameObject targetMenu;
     public BattleTargetButton[] targetButtons;
-
     public GameObject magicMenu;
     public BattleMagicSelect[] magicButtons;
-
     public BattleNotification battleNotice;
-
     public int chanceToFlee = 35;
     private bool fleeing;
-
     public string gameOverScene;
-
     public int rewardXP;
     public string[] rewardItems;
-
     public bool cannotFlee;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    [SerializeField] WorldManager worldManager;
+
+    [SerializeField] WorldManagerData dojoConfig;
+
+    [SerializeField] GameManagerData gameManagerData;
+
+    public BurnerManager burnerManager;
+    private Dictionary<FieldElement, string> spawnedAccounts = new();
+    [SerializeField] Actions actions;
+
+    public JsonRpcClient provider;
+    public Account masterAccount;
+
+    // Use this for initialization
+    void Start()
+    {
         instance = this;
         DontDestroyOnLoad(gameObject);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.T))
+        provider = new JsonRpcClient(dojoConfig.rpcUrl);
+        masterAccount = new Account(provider, new SigningKey(gameManagerData.masterPrivateKey), new FieldElement(gameManagerData.masterAddress));
+        burnerManager = new BurnerManager(provider, masterAccount);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
         {
-            BattleStart(new string[] { "Eyeball"}, false);
+            BattleStart(new string[] { "Eyeball" }, false);
         }
 
-        if(battleActive)
+        if (battleActive)
         {
-            if(turnWaiting)
+            if (turnWaiting)
             {
-                if(activeBattlers[currentTurn].isPlayer)
+                if (activeBattlers[currentTurn].isPlayer)
                 {
                     uiButtonsHolder.SetActive(true);
-                } else
+                }
+                else
                 {
                     uiButtonsHolder.SetActive(false);
 
@@ -79,17 +89,17 @@ public class BattleManager : MonoBehaviour {
                 }
             }
 
-            if(Input.GetKeyDown(KeyCode.N))
+            if (Input.GetKeyDown(KeyCode.N))
             {
                 NextTurn();
             }
         }
-	}
+    }
 
     public void BattleStart(string[] enemiesToSpawn, bool setCannotFlee)
     {
         PlayerController.instance.ActivateJoystick(false);
-        if(!battleActive)
+        if (!battleActive)
         {
             cannotFlee = setCannotFlee;
 
@@ -102,18 +112,19 @@ public class BattleManager : MonoBehaviour {
 
             AudioManager.instance.PlayBGM(0);
 
-            for(int i = 0; i < playerPositions.Length; i++)//for no of players to spawn
+            for (int i = 0; i < playerPositions.Length; i++)//for no of players to spawn
             {
-                if(GameManager.instance.playerStats[i].gameObject.activeInHierarchy)//if the playerstats available/active
+                if (GameManager.instance.playerStats[i].gameObject.activeInHierarchy)//if the playerstats available/active
                 {
-                    for(int j = 0; j < playerPrefabs.Length; j++)//for all characters available for player
+                    for (int j = 0; j < playerPrefabs.Length; j++)//for all characters available for player
                     {
-                        if(playerPrefabs[j].charName == GameManager.instance.playerStats[i].charName)//when the desired character prefab is found
+                        if (playerPrefabs[j].charName == GameManager.instance.playerStats[i].charName)//when the desired character prefab is found
                         {
                             Debug.Log("Spawning :" + playerPrefabs[j].charName);
-                           
+
                             BattleChar newPlayer = Instantiate(playerPrefabs[j], playerPositions[i].position, playerPositions[i].rotation);
                             newPlayer.transform.parent = playerPositions[i];
+
                             if (playerPrefabs[j].charName != "Tim")
                             {
                                 activeBattlers.Add(newPlayer);
@@ -129,12 +140,8 @@ public class BattleManager : MonoBehaviour {
                                 activeBattlers[noOfBattlers].wpnPower = thePlayer.wpnPwr;
                                 activeBattlers[noOfBattlers].armrPower = thePlayer.armrPwr;
                             }
-                            
-                            
                         }
                     }
-
-
                 }
             }
             //spawning enemies
@@ -149,6 +156,25 @@ public class BattleManager : MonoBehaviour {
                             BattleChar newEnemy = Instantiate(enemyPrefabs[j], enemyPositions[i].position, enemyPositions[i].rotation);
                             newEnemy.transform.parent = enemyPositions[i];
                             activeBattlers.Add(newEnemy);
+
+                            Debug.Log("Create Beasts Dojo");
+                            Task taskDown = actions.createBeast(
+                                burnerManager.CurrentBurner ?? masterAccount,
+                                beast_id: (uint)j,
+                                beast_type: new Dojo.Starknet.FieldElement("normal"),
+                                hp: (uint)enemyPrefabs[j].maxHP,
+                                currentHp: (uint)enemyPrefabs[j].currentHp,
+                                mp: (uint)enemyPrefabs[j].maxMP,
+                                currentMp: (uint)enemyPrefabs[j].currentMP,
+                                strength: (uint)enemyPrefabs[j].strength,
+                                defense: (uint)enemyPrefabs[j].defence,
+                                equipped_weapon: new Dojo.Starknet.FieldElement("none"),
+                                wpn_power: (byte)enemyPrefabs[j].wpnPower,
+                                equipped_armor: new Dojo.Starknet.FieldElement("none"),
+                                armor_power: (uint)enemyPrefabs[j].armrPower,
+                                experience_to_nex_level: 500
+                            );
+                            StartCoroutine(DoCreateBeast(taskDown));
                         }
                     }
                 }
@@ -164,7 +190,7 @@ public class BattleManager : MonoBehaviour {
     public void NextTurn()
     {
         currentTurn++;
-        if(currentTurn >= activeBattlers.Count)
+        if (currentTurn >= activeBattlers.Count)
         {
             currentTurn = 0;
         }
@@ -180,44 +206,48 @@ public class BattleManager : MonoBehaviour {
         bool allEnemiesDead = true;
         bool allPlayersDead = true;
 
-        for(int i = 0; i < activeBattlers.Count; i++)
+        for (int i = 0; i < activeBattlers.Count; i++)
         {
-            if(activeBattlers[i].currentHp < 0)
+            if (activeBattlers[i].currentHp < 0)
             {
                 activeBattlers[i].currentHp = 0;
             }
 
-            if(activeBattlers[i].currentHp == 0)
+            if (activeBattlers[i].currentHp == 0)
             {
                 //Handle dead battler
-                if(activeBattlers[i].isPlayer)
+                if (activeBattlers[i].isPlayer)
                 {
                     activeBattlers[i].theSprite.sprite = activeBattlers[i].deadSprite;
-                } else
+                }
+                else
                 {
                     activeBattlers[i].EnemyFade();
                 }
 
-            } else
+            }
+            else
             {
-                if(activeBattlers[i].isPlayer)
+                if (activeBattlers[i].isPlayer)
                 {
                     allPlayersDead = false;
                     activeBattlers[i].theSprite.sprite = activeBattlers[i].aliveSprite;
-                } else
+                }
+                else
                 {
                     allEnemiesDead = false;
                 }
             }
         }
 
-        if(allEnemiesDead || allPlayersDead)
+        if (allEnemiesDead || allPlayersDead)
         {
-            if(allEnemiesDead)
+            if (allEnemiesDead)
             {
                 //end battle in victory
                 StartCoroutine(EndBattleCo());
-            } else
+            }
+            else
             {
                 //end battle in failure
                 StartCoroutine(GameOverCo());
@@ -226,12 +256,13 @@ public class BattleManager : MonoBehaviour {
             /* battleScene.SetActive(false);
             GameManager.instance.battleActive = false;
             battleActive = false; */
-        } else
+        }
+        else
         {
-            while(activeBattlers[currentTurn].currentHp == 0)
+            while (activeBattlers[currentTurn].currentHp == 0)
             {
                 currentTurn++;
-                if(currentTurn >= activeBattlers.Count)
+                if (currentTurn >= activeBattlers.Count)
                 {
                     currentTurn = 0;
                 }
@@ -251,9 +282,9 @@ public class BattleManager : MonoBehaviour {
     public void EnemyAttack()
     {
         List<int> players = new List<int>();
-        for(int i = 0; i < activeBattlers.Count; i++)
+        for (int i = 0; i < activeBattlers.Count; i++)
         {
-            if(activeBattlers[i].isPlayer && activeBattlers[i].currentHp > 0)
+            if (activeBattlers[i].isPlayer && activeBattlers[i].currentHp > 0)
             {
                 players.Add(i);
             }
@@ -264,9 +295,9 @@ public class BattleManager : MonoBehaviour {
 
         int selectAttack = Random.Range(0, activeBattlers[currentTurn].movesAvailable.Length);
         int movePower = 0;
-        for(int i = 0; i < movesList.Length; i++)
+        for (int i = 0; i < movesList.Length; i++)
         {
-            if(movesList[i].moveName == activeBattlers[currentTurn].movesAvailable[selectAttack])
+            if (movesList[i].moveName == activeBattlers[currentTurn].movesAvailable[selectAttack])
             {
                 Instantiate(movesList[i].theEffect, activeBattlers[selectedTarget].transform.position, activeBattlers[selectedTarget].transform.rotation);
                 movePower = movesList[i].movePower;
@@ -310,11 +341,13 @@ public class BattleManager : MonoBehaviour {
                     playerHP[i].text = Mathf.Clamp(playerData.currentHp, 0, int.MaxValue) + "/" + playerData.maxHP;
                     playerMP[i].text = Mathf.Clamp(playerData.currentMP, 0, int.MaxValue) + "/" + playerData.maxMP;
 
-                } else
+                }
+                else
                 {
                     playerName[i].gameObject.SetActive(false);
                 }
-            } else
+            }
+            else
             {
                 playerName[i].gameObject.SetActive(false);
             }
@@ -350,24 +383,25 @@ public class BattleManager : MonoBehaviour {
         targetMenu.SetActive(true);
 
         List<int> Enemies = new List<int>();
-        for(int i = 0; i < activeBattlers.Count; i++)
+        for (int i = 0; i < activeBattlers.Count; i++)
         {
-            if(!activeBattlers[i].isPlayer)
+            if (!activeBattlers[i].isPlayer)
             {
                 Enemies.Add(i);
             }
         }
 
-        for(int i = 0; i < targetButtons.Length; i++)
+        for (int i = 0; i < targetButtons.Length; i++)
         {
-            if(Enemies.Count > i && activeBattlers[Enemies[i]].currentHp > 0)
+            if (Enemies.Count > i && activeBattlers[Enemies[i]].currentHp > 0)
             {
                 targetButtons[i].gameObject.SetActive(true);
 
                 targetButtons[i].moveName = moveName;
                 targetButtons[i].activeBattlerTarget = Enemies[i];
                 targetButtons[i].targetName.text = activeBattlers[Enemies[i]].charName;
-            } else
+            }
+            else
             {
                 targetButtons[i].gameObject.SetActive(false);
             }
@@ -378,25 +412,26 @@ public class BattleManager : MonoBehaviour {
     {
         magicMenu.SetActive(true);
 
-        for(int i = 0; i < magicButtons.Length; i++)
+        for (int i = 0; i < magicButtons.Length; i++)
         {
-            if(activeBattlers[currentTurn].movesAvailable.Length > i)
+            if (activeBattlers[currentTurn].movesAvailable.Length > i)
             {
                 magicButtons[i].gameObject.SetActive(true);
 
                 magicButtons[i].spellName = activeBattlers[currentTurn].movesAvailable[i];
                 magicButtons[i].nameText.text = magicButtons[i].spellName;
 
-                for(int j = 0; j < movesList.Length; j++)
+                for (int j = 0; j < movesList.Length; j++)
                 {
-                    if(movesList[j].moveName == magicButtons[i].spellName)
+                    if (movesList[j].moveName == magicButtons[i].spellName)
                     {
                         magicButtons[i].spellCost = movesList[j].moveCost;
                         magicButtons[i].costText.text = magicButtons[i].spellCost.ToString();
                     }
                 }
 
-            } else
+            }
+            else
             {
                 magicButtons[i].gameObject.SetActive(false);
             }
@@ -446,13 +481,13 @@ public class BattleManager : MonoBehaviour {
 
         yield return new WaitForSeconds(1.5f);
 
-        for(int i = 0; i < activeBattlers.Count; i++)
+        for (int i = 0; i < activeBattlers.Count; i++)
         {
-            if(activeBattlers[i].isPlayer)
+            if (activeBattlers[i].isPlayer)
             {
-                for(int j = 0; j < GameManager.instance.playerStats.Length; j++)
+                for (int j = 0; j < GameManager.instance.playerStats.Length; j++)
                 {
-                    if(activeBattlers[i].charName == GameManager.instance.playerStats[j].charName)
+                    if (activeBattlers[i].charName == GameManager.instance.playerStats[j].charName)
                     {
                         GameManager.instance.playerStats[j].currentHP = activeBattlers[i].currentHp;
                         GameManager.instance.playerStats[j].currentMP = activeBattlers[i].currentMP;
@@ -468,11 +503,12 @@ public class BattleManager : MonoBehaviour {
         activeBattlers.Clear();
         currentTurn = 0;
         //GameManager.instance.battleActive = false;
-        if(fleeing)
+        if (fleeing)
         {
             GameManager.instance.battleActive = false;
             fleeing = false;
-        } else
+        }
+        else
         {
             BattleReward.instance.OpenRewardScreen(rewardXP, rewardItems);
         }
@@ -488,4 +524,13 @@ public class BattleManager : MonoBehaviour {
         battleScene.SetActive(false);
         SceneManager.LoadScene(gameOverScene);
     }
+
+    private IEnumerator DoCreateBeast(Task task)
+{
+    yield return new WaitUntil(() => task.IsCompleted);
+    if (task.IsCompletedSuccessfully)
+    {
+        Debug.Log("Beast created");
+    }
+}
 }
