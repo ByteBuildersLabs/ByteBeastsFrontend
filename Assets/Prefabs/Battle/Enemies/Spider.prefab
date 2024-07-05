@@ -103,7 +103,7 @@ MonoBehaviour:
   - Plasma
   charName: Spider
   currentHp: 150
-  maxHP: 250
+  maxHP: 150
   currentMP: 0
   maxMP: 0
   strength: 5
