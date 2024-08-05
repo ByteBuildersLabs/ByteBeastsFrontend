@@ -1,4 +1,4 @@
-# ByteBeastsFrontend
+# ByteBeasts Frontend
 - This is the Unity Project for ByteBeast Game -- This is work in progress
 
 <img width="928" alt="Captura de pantalla 2024-08-05 a la(s) 6 20 29 p  m" src="https://github.com/user-attachments/assets/672227b4-4081-44cd-9e6b-d36d71925058">
