@@ -7,7 +7,7 @@
 We welcome contributions to the ByteBeasts Frontend project! To get started, please follow these guidelines:
 
 ### 1. Fork the Repository
-1. Navigate to the [ByteBeasts Frontend repository](https://github.com/your-repo-url).
+1. Navigate to the [ByteBeasts Frontend repository](https://github.com/ByteBuildersLabs/ByteBeastsFrontend).
 2. Click on the "Fork" button in the top-right corner of the page to create your own copy of the repository.
 
 ### 2. Clone Your Fork
@@ -48,7 +48,7 @@ Test your changes to ensure everything works as expected.
 ### 6. Keep Your Fork Updated
 1. Add the original repository as a remote to keep your fork up to date:
    ```bash
-   git remote add upstream https://github.com/original-owner/ByteBeastsFrontend.git
+   git remote add upstream https://github.com/ByteBuildersLabs/ByteBeastsFrontend.git
    ```
 2. Fetch the latest changes from the original repository:
    ```bash
@@ -66,7 +66,7 @@ Push your changes to your fork:
    ```
 
 ### 8. Create a Pull Request
-1. Go to the [Pull Requests page](https://github.com/your-username/ByteBeastsFrontend/pulls) on GitHub.
+1. Go to the [Pull Requests page](https://github.com/ByteBuildersLabs/ByteBeastsFrontend/pulls) on GitHub.
 2. Click the "New Pull Request" button.
 3. Select your branch and the base branch you want to merge into.
 4. Add a description of your changes and submit the pull request.
