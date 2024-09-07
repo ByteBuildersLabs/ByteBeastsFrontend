@@ -23,7 +23,6 @@ namespace RPGM.Gameplay
 
         public HashSet<StoryItem> requiredStoryItems;
         public HashSet<InventoryItem> requiredInventoryItems;
-        public Cutscene cutscenePrefab;
 
         [System.NonSerialized] public HashSet<StoryItem> dependentStoryItems = new HashSet<StoryItem>();
 
@@ -75,14 +74,6 @@ namespace RPGM.Gameplay
             else
                 UserInterfaceAudio.PlayClip(audioClip);
             if (disableWhenDiscovered) gameObject.SetActive(false);
-            if (cutscenePrefab != null)
-            {
-                var cs = Instantiate(cutscenePrefab);
-                if (cs.audioClip != null)
-                {
-                    cs.OnFinish += (i) => model.musicController.CrossFade(model.musicController.audioClip);
-                }
-            }
         }
 
         public void OnBeforeSerialize()

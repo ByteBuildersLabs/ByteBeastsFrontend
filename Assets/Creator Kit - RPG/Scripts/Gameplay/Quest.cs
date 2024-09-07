@@ -38,8 +38,6 @@ namespace RPGM.Gameplay
 
         public bool destroySpawnsOnQuestComplete = true;
 
-        public Cutscene introCutscenePrefab, outroCutscenePrefab;
-
         List<GameObject> cleanup = new List<GameObject>();
 
         public bool isStarted = false;
@@ -72,14 +70,6 @@ namespace RPGM.Gameplay
         public void OnStartQuest()
         {
             isFinished = false;
-            if (introCutscenePrefab != null)
-            {
-                var cs = Instantiate(introCutscenePrefab);
-                if (cs.audioClip != null)
-                {
-                    cs.OnFinish += (i) => model.musicController.CrossFade(model.musicController.audioClip);
-                }
-            }
             if (enableOnQuestStart != null)
                 foreach (var i in enableOnQuestStart)
                     if (i != null)
@@ -124,14 +114,6 @@ namespace RPGM.Gameplay
                 model.AddInventoryItem(i);
                 UserInterfaceAudio.OnCollect();
                 i.gameObject.SetActive(false);
-            }
-            if (outroCutscenePrefab != null)
-            {
-                var cs = Instantiate(outroCutscenePrefab);
-                if (cs.audioClip != null)
-                {
-                    cs.OnFinish += (i) => model.musicController.CrossFade(model.musicController.audioClip);
-                }
             }
 
         }
