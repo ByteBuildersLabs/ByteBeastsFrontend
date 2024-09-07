@@ -67,10 +67,10 @@ public class PlayerController : MonoBehaviour {
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        #if UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
-            horizontal = joystick.Horizontal;
-            vertical = joystick.Vertical;
-        #endif
+        //#if UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
+        //    horizontal = joystick.Horizontal;
+        //    vertical = joystick.Vertical;
+        //#endif
 
         if (canMove)
         {
