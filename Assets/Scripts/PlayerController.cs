@@ -35,11 +35,11 @@ public class PlayerController : MonoBehaviour {
 
     void Start()
     {
-        joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FixedJoystick>();
+        // joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FixedJoystick>();
 
-        #if UNITY_STANDALONE_WIN
-            joystick.gameObject.SetActive(false);
-        #endif
+        // #if UNITY_STANDALONE_WIN
+        //     joystick.gameObject.SetActive(false);
+        // #endif
     }
 
     void Update()
