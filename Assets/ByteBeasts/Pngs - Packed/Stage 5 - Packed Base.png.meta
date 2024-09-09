@@ -1,0 +1,1319 @@
+fileFormatVersion: 2
+guid: b854dbcc189a2d749a66c074c119581b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 22
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_2
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 768
+        width: 121
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba8c3cd429129464a9f87d830af4f72c
+      internalID: 1913369223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_4
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 768
+        width: 127
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b48463313279544bdfa233af2f3ad2
+      internalID: -395302861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f452c583770cf847b7ff41ac71c3a1d
+      internalID: -804167920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_6
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 640
+        width: 128
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b3a078da05e42749ab1647049e33d59
+      internalID: -128149059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_7
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 512
+        width: 126
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea932f84ba4f6d418b6e98507d5e521
+      internalID: -1883175097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b6942aa1985fa4486b8baf171941ce
+      internalID: -1354657567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_10
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 256
+        width: 120
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97941c3171e6e784abbde5e7228e498a
+      internalID: -1704938030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_12
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 132
+        width: 124
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0828af8a00a353b41b10a59f7700ae8b
+      internalID: -654094198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_13
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 128
+        width: 126
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08381fa194ddb464fbf339912f15f94b
+      internalID: -1182296464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_14
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 128
+        width: 97
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd91c891b852603479582d90c54a3c3a
+      internalID: 1797436192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_15
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 127
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d0d346841b7f86449007186b133b36a
+      internalID: -1529342162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_16
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102e438fa27bd5142a698a09638e79f9
+      internalID: -1868998093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_17
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 0
+        width: 132
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633eb0802749f0144b13255784126c57
+      internalID: -464474240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_18
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 126
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b728158d73ae1d9488d784018498b45f
+      internalID: -1710765912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_30
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1551ef9dc59b6e3429573dc9eedb1066
+      internalID: -1495319235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_31
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 104
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cfbe4663717cba40a6a460877412d5a
+      internalID: 94578467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_39
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 128
+        width: 129
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a43216927436c4eaf4fbea70fd1851
+      internalID: -1440097167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_40
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 130
+        width: 126
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39076f58e50e3884f997c58ba219dc51
+      internalID: 741817128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_41
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 128
+        width: 133
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9652ae7e9a8b194abc292ce57c370f4
+      internalID: 167666040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 130
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4c2dd24d7ed39f44a6da122b7165229
+      internalID: -757063647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 641
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d211edc7028315a41aee8a5f5a61c24f
+      internalID: 1667292609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e534f79310107f244bb39dc59509abd7
+      internalID: 1135694522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 468dc22c2d61bf744ae8a08d40eecf4b
+      internalID: 671700902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 642
+        width: 128
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9908628f03fab0042977d3c6bb2eaeb6
+      internalID: 1467816636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_21
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 510
+        width: 132
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1eaffdfbb9ffce4bac454f51d9eaef9
+      internalID: 1156474203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_22
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 514
+        width: 121
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fbeae8eef2f2d47a7715a099eae9e4
+      internalID: -1619282918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_23
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 512
+        width: 131
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ebb590e2a6ce94a8cf3f1980b258a1
+      internalID: -403880524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_24
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 511
+        width: 126
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066dd42aae2247c409a34d65883a0e59
+      internalID: -573382814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_25
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41946cd351332164fa5ee1cd09fc989c
+      internalID: 1811949786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_26
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 380
+        width: 127
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113d711d0cee8c64b9c09890df7bd29e
+      internalID: 2088843143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_27
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 383
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec3a3c75274ba440a310a9a92ee27db
+      internalID: 520354646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_28
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 382
+        width: 128
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc31477773145a844921e6974f9d2d0b
+      internalID: 438816331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_29
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 383
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba923194cc2e044dac4013e72c67f6c
+      internalID: -377662579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_32
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 259
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb23c26ab4205045b305b0415348ef9
+      internalID: 1176736510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_33
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 254
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac0bc2ef99c4084a9b62c80c46ce670
+      internalID: 1327531185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_34
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 256
+        width: 126
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b0d6e90dc4c13408e1f7d8bdcbb9a6
+      internalID: -1969969678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_35
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 129
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc81ed9995995a24fa0db932d0788692
+      internalID: -1820173676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_36
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 255
+        width: 128
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c19a59d3e3fe14a9dbab3d675501b7
+      internalID: -337597095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_37
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 256
+        width: 130
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86d06384ec36a44a811bad8a6b4ad39
+      internalID: 1404255166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_0
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 766
+        width: 130
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f1409760153fe42ac9e66ac50ce497
+      internalID: -1487600958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 639
+        width: 128
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79edcd96748517f42806d63baa429a2b
+      internalID: 479094860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca74b6036fc2bde43a0c3feee5fa0425
+      internalID: -19972557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 767
+        width: 127
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a6e213020760147b37bf95e8bf693d
+      internalID: -993869557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_43
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 766
+        width: 128
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d466dc6e40b69e41bd1d79bbf276acd
+      internalID: 72051308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 769
+        width: 128
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77a856c63cfaa14087fdc862ce38471
+      internalID: 543358694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_45
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e734852951c85f549a14a4a89e5614ae
+      internalID: -731049201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 638
+        width: 127
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876c81ca4f86212409096d6f6e7298af
+      internalID: 1801226138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 510
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4d0077c01ec524a965bf2274bc7abc
+      internalID: 110781122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_48
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8996d28ad7b8c974a8af0710ba859863
+      internalID: 629611428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_49
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 511
+        width: 128
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be7fc2d8e06ff84fbfa7e5b89a130cf
+      internalID: 1876712985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 383
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d68f91397f8bfc644a118309d38308bc
+      internalID: 661168487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_51
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 383
+        width: 125
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9469ec5495c413f49af0afb3cb6791c0
+      internalID: 702816749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stage 5 - Packed Base_52
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 384
+        width: 126
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993fe70021d7e094c81bcea60f402b3b
+      internalID: 1146139979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Stage 5 - Packed Base_0: -1487600958
+      Stage 5 - Packed Base_1: 479094860
+      Stage 5 - Packed Base_10: -1704938030
+      Stage 5 - Packed Base_11: 671700902
+      Stage 5 - Packed Base_12: -654094198
+      Stage 5 - Packed Base_13: -1182296464
+      Stage 5 - Packed Base_14: 1797436192
+      Stage 5 - Packed Base_15: -1529342162
+      Stage 5 - Packed Base_16: -1868998093
+      Stage 5 - Packed Base_17: -464474240
+      Stage 5 - Packed Base_18: -1710765912
+      Stage 5 - Packed Base_19: -757063647
+      Stage 5 - Packed Base_2: 1913369223
+      Stage 5 - Packed Base_20: 1467816636
+      Stage 5 - Packed Base_21: 1156474203
+      Stage 5 - Packed Base_22: -1619282918
+      Stage 5 - Packed Base_23: -403880524
+      Stage 5 - Packed Base_24: -573382814
+      Stage 5 - Packed Base_25: 1811949786
+      Stage 5 - Packed Base_26: 2088843143
+      Stage 5 - Packed Base_27: 520354646
+      Stage 5 - Packed Base_28: 438816331
+      Stage 5 - Packed Base_29: -377662579
+      Stage 5 - Packed Base_3: 1667292609
+      Stage 5 - Packed Base_30: -1495319235
+      Stage 5 - Packed Base_31: 94578467
+      Stage 5 - Packed Base_32: 1176736510
+      Stage 5 - Packed Base_33: 1327531185
+      Stage 5 - Packed Base_34: -1969969678
+      Stage 5 - Packed Base_35: -1820173676
+      Stage 5 - Packed Base_36: -337597095
+      Stage 5 - Packed Base_37: 1404255166
+      Stage 5 - Packed Base_38: -19972557
+      Stage 5 - Packed Base_39: -1440097167
+      Stage 5 - Packed Base_4: -395302861
+      Stage 5 - Packed Base_40: 741817128
+      Stage 5 - Packed Base_41: 167666040
+      Stage 5 - Packed Base_42: -993869557
+      Stage 5 - Packed Base_43: 72051308
+      Stage 5 - Packed Base_44: 543358694
+      Stage 5 - Packed Base_45: -731049201
+      Stage 5 - Packed Base_46: 1801226138
+      Stage 5 - Packed Base_47: 110781122
+      Stage 5 - Packed Base_48: 629611428
+      Stage 5 - Packed Base_49: 1876712985
+      Stage 5 - Packed Base_5: -804167920
+      Stage 5 - Packed Base_50: 661168487
+      Stage 5 - Packed Base_51: 702816749
+      Stage 5 - Packed Base_52: 1146139979
+      Stage 5 - Packed Base_6: -128149059
+      Stage 5 - Packed Base_7: -1883175097
+      Stage 5 - Packed Base_8: 1135694522
+      Stage 5 - Packed Base_9: -1354657567
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
