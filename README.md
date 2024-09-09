@@ -2,6 +2,8 @@
 # ByteBeasts Frontend
 - This is the Unity Frontend for ByteBeast Game -- This is work in progress
 
+for better idea of the project look this: https://miro.com/welcomeonboard/Tm13OHBCa0VtR1MwaWFrcnRWM1lscUN3RExLclc0cEMyem1ia3lDQ1p2WmtIbnYzdGF4NGQ2aW5GV2tleHFKQXwzNDU4NzY0NTk5MTAzMzA0OTEwfDI=?share_link_id=866895323732
+
 ## Contributing
 
 We welcome contributions to the ByteBeasts Frontend project! To get started, please follow these guidelines:
