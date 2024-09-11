@@ -5,30 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
+    // Static instance for singleton pattern to ensure there's only one GameManager
     public static GameManager instance;
 
+    // Array of character stats for players
     public CharStats[] playerStats;
 
+    // Booleans to track different game states (menu, dialogue, fading between areas, shop, battle)
     public bool gameMenuOpen, dialogActive, fadingBetweenAreas, shopActive, battleActive;
 
+    // Arrays for tracking items held, their quantities, and reference to item data
     public string[] itemsHeld;
     public int[] numberOfItems;
     public Item[] referenceItems;
 
+    // Player's gold amount
     public int currentGold;
 
-	// Use this for initialization
-	void Start () {
+    // Called when the game starts
+    void Start () {
+        // Set the singleton instance to this object
         instance = this;
 
+        // Prevent the object from being destroyed when loading new scenes
         DontDestroyOnLoad(gameObject);
 
+        // Sort items in the inventory at the start of the game
         SortItems();
-	}
+    }
 	
-	// Update is called once per frame
-	void Update () {
-		if(gameMenuOpen || dialogActive || fadingBetweenAreas || shopActive || battleActive)
+    // Called every frame
+    void Update () {
+        // Disable player movement if any of these activities are active
+        if(gameMenuOpen || dialogActive || fadingBetweenAreas || shopActive || battleActive)
         {
             PlayerController.instance.canMove = false;
         } else
@@ -36,6 +45,7 @@ public class GameManager : MonoBehaviour {
             PlayerController.instance.canMove = true;
         }
 
+        // Debug: Add and remove items with keyboard inputs
         if(Input.GetKeyDown(KeyCode.J))
         {
             AddItem("Iron Armor");
@@ -45,75 +55,84 @@ public class GameManager : MonoBehaviour {
             RemoveItem("Bleep");
         }
 
+        // Debug: Save the game with the 'O' key
         if (Input.GetKeyDown(KeyCode.O))
         {
             SaveData();
         }
 
+        // Debug: Load the game with the 'P' key
         if (Input.GetKeyDown(KeyCode.P))
         {
             LoadData();
         }
     }
 
+    // Returns details about a specific item by name
     public Item GetItemDetails(string itemToGrab)
     {
-
+        // Loop through reference items to find a match
         for(int i = 0; i < referenceItems.Length; i++)
         {
             if(referenceItems[i].itemName == itemToGrab)
             {
-                return referenceItems[i];
+                return referenceItems[i]; // Return item details if found
             }
         }
-
-
-
-
-        return null;
+        return null; // Return null if item is not found
     }
 
+    // Sorts the items in the player's inventory by moving empty slots to the end
     public void SortItems()
     {
-        bool itemAFterSpace = true;
+        bool itemAfterSpace = true;
 
-        while (itemAFterSpace)
+        // Continue sorting while there are items after empty slots
+        while (itemAfterSpace)
         {
-            itemAFterSpace = false;
+            itemAfterSpace = false;
+
+            // Loop through the inventory and move items up if there are empty spaces
             for (int i = 0; i < itemsHeld.Length - 1; i++)
             {
                 if (itemsHeld[i] == "")
                 {
+                    // Shift the next item into the current slot
                     itemsHeld[i] = itemsHeld[i + 1];
                     itemsHeld[i + 1] = "";
 
+                    // Shift the number of items as well
                     numberOfItems[i] = numberOfItems[i + 1];
                     numberOfItems[i + 1] = 0;
 
+                    // If a shift was made, continue the loop
                     if(itemsHeld[i] != "")
                     {
-                        itemAFterSpace = true;
+                        itemAfterSpace = true;
                     }
                 }
             }
         }
     }
 
+    // Adds an item to the player's inventory
     public void AddItem(string itemToAdd)
     {
         int newItemPosition = 0;
         bool foundSpace = false;
 
+        // Look for an empty space or a stack of the same item
         for(int i = 0; i < itemsHeld.Length; i++)
         {
             if(itemsHeld[i] == "" || itemsHeld[i] == itemToAdd)
             {
                 newItemPosition = i;
-                i = itemsHeld.Length;
                 foundSpace = true;
+                break;
             }
         }
 
+        // If space was found, check if the item exists in the reference items
         if(foundSpace)
         {
             bool itemExists = false;
@@ -122,49 +141,55 @@ public class GameManager : MonoBehaviour {
                 if(referenceItems[i].itemName == itemToAdd)
                 {
                     itemExists = true;
-
-                    i = referenceItems.Length;
+                    break;
                 }
             }
 
+            // If item exists, add it to the inventory
             if(itemExists)
             {
                 itemsHeld[newItemPosition] = itemToAdd;
                 numberOfItems[newItemPosition]++;
-            } else
+            }
+            else
             {
                 Debug.LogError(itemToAdd + " Does Not Exist!!");
             }
         }
 
+        // Update the game menu to show the new item
         GameMenu.instance.ShowItems();
     }
 
+    // Removes an item from the player's inventory
     public void RemoveItem(string itemToRemove)
     {
         bool foundItem = false;
         int itemPosition = 0;
 
+        // Find the item in the inventory
         for(int i = 0; i < itemsHeld.Length; i++)
         {
             if(itemsHeld[i] == itemToRemove)
             {
                 foundItem = true;
                 itemPosition = i;
-
-                i = itemsHeld.Length;
+                break;
             }
         }
 
+        // If item was found, reduce its quantity or remove it completely
         if(foundItem)
         {
             numberOfItems[itemPosition]--;
 
+            // Remove the item if its quantity reaches zero
             if(numberOfItems[itemPosition] <= 0)
             {
                 itemsHeld[itemPosition] = "";
             }
 
+            // Update the game menu to reflect the changes
             GameMenu.instance.ShowItems();
         } else
         {
@@ -172,24 +197,19 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    // Saves the game data to PlayerPrefs
     public void SaveData()
     {
+        // Save the current scene and player position
         PlayerPrefs.SetString("Current_Scene", SceneManager.GetActiveScene().name);
         PlayerPrefs.SetFloat("Player_Position_x", PlayerController.instance.transform.position.x);
         PlayerPrefs.SetFloat("Player_Position_y", PlayerController.instance.transform.position.y);
         PlayerPrefs.SetFloat("Player_Position_z", PlayerController.instance.transform.position.z);
 
-        //save character info
+        // Save character stats for each player
         for(int i = 0; i < playerStats.Length; i++)
         {
-            if(playerStats[i].gameObject.activeInHierarchy)
-            {
-                PlayerPrefs.SetInt("Player_" + playerStats[i].charName + "_active", 1);
-            } else
-            {
-                PlayerPrefs.SetInt("Player_" + playerStats[i].charName + "_active", 0);
-            }
-            
+            PlayerPrefs.SetInt("Player_" + playerStats[i].charName + "_active", playerStats[i].gameObject.activeInHierarchy ? 1 : 0);
             PlayerPrefs.SetInt("Player_" + playerStats[i].charName + "_Level", playerStats[i].playerLevel);
             PlayerPrefs.SetInt("Player_" + playerStats[i].charName + "_CurrentExp", playerStats[i].currentEXP);
             PlayerPrefs.SetInt("Player_" + playerStats[i].charName + "_CurrentHP", playerStats[i].currentHP);
@@ -204,7 +224,7 @@ public class GameManager : MonoBehaviour {
             PlayerPrefs.SetString("Player_" + playerStats[i].charName + "_EquippedArmr", playerStats[i].equippedArmr);
         }
 
-        //store inventory data
+        // Save inventory data
         for(int i = 0; i < itemsHeld.Length; i++)
         {
             PlayerPrefs.SetString("ItemInInventory_" + i, itemsHeld[i]);
@@ -212,20 +232,16 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    // Loads the game data from PlayerPrefs
     public void LoadData()
     {
+        // Load player position
         PlayerController.instance.transform.position = new Vector3(PlayerPrefs.GetFloat("Player_Position_x"), PlayerPrefs.GetFloat("Player_Position_y"), PlayerPrefs.GetFloat("Player_Position_z"));
 
+        // Load character stats
         for(int i = 0; i < playerStats.Length; i++)
         {
-            if(PlayerPrefs.GetInt("Player_" + playerStats[i].charName + "_active") == 0)
-            {
-                playerStats[i].gameObject.SetActive(false);
-            } else
-            {
-                playerStats[i].gameObject.SetActive(true);
-            }
-
+            playerStats[i].gameObject.SetActive(PlayerPrefs.GetInt("Player_" + playerStats[i].charName + "_active") == 1);
             playerStats[i].playerLevel = PlayerPrefs.GetInt("Player_" + playerStats[i].charName + "_Level");
             playerStats[i].currentEXP = PlayerPrefs.GetInt("Player_" + playerStats[i].charName + "_CurrentExp");
             playerStats[i].currentHP = PlayerPrefs.GetInt("Player_" + playerStats[i].charName + "_CurrentHP");
@@ -240,6 +256,7 @@ public class GameManager : MonoBehaviour {
             playerStats[i].equippedArmr = PlayerPrefs.GetString("Player_" + playerStats[i].charName + "_EquippedArmr");
         }
 
+        // Load inventory data
         for(int i = 0; i < itemsHeld.Length; i++)
         {
             itemsHeld[i] = PlayerPrefs.GetString("ItemInInventory_" + i);

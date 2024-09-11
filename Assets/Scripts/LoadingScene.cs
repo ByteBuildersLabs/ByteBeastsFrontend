@@ -4,25 +4,32 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadingScene : MonoBehaviour {
+
+    // Time to wait before loading the scene
     public float waitToLoad;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(waitToLoad > 0)
+    // Called when the script instance is being loaded
+    void Start () {
+        // Initialization code (if any) goes here
+    }
+
+    // Called once per frame
+    void Update () {
+        // Check if there is a wait time remaining
+        if (waitToLoad > 0)
         {
+            // Decrease the wait time based on elapsed time
             waitToLoad -= Time.deltaTime;
-            if(waitToLoad <= 0)
+            // If wait time has elapsed
+            if (waitToLoad <= 0)
             {
+                // Load the scene specified by "Current_Scene" in PlayerPrefs
                 SceneManager.LoadScene(PlayerPrefs.GetString("Current_Scene"));
 
+                // Load game data and quest data from GameManager and QuestManager
                 GameManager.instance.LoadData();
                 QuestManager.instance.LoadQuestData();
             }
         }
-	}
+    }
 }
