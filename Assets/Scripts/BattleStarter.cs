@@ -4,106 +4,106 @@ using UnityEngine;
 
 public class BattleStarter : MonoBehaviour {
 
-    public BAttleType[] potentialBattles; // Lista de posibles batallas que pueden iniciarse
+    public BAttleType[] potentialBattles; // List of potential battles that can start
 
-    public bool activateOnEnter, activateOnStay, activateOnExit; // Flags para determinar cuándo iniciar la batalla (al entrar, permanecer o salir de la zona)
+    public bool activateOnEnter, activateOnStay, activateOnExit; // Flags to determine when to start the battle (on entering, staying, or exiting the zone)
 
-    private bool inArea; // Indica si el jugador está dentro del área de activación
-    public float timeBetweenBattles = 10f; // Tiempo entre batallas
-    private float betweenBattleCounter; // Contador para el tiempo entre batallas
+    private bool inArea; // Indicates if the player is inside the activation area
+    public float timeBetweenBattles = 10f; // Time between battles
+    private float betweenBattleCounter; // Counter for the time between battles
 
-    public bool deactivateAfterStarting; // Si es verdadero, desactiva el activador después de iniciar la batalla
+    public bool deactivateAfterStarting; // If true, deactivates the trigger after starting the battle
 
-    public bool cannotFlee; // Determina si es posible huir de la batalla
+    public bool cannotFlee; // Determines if fleeing from the battle is possible
 
-    public bool shouldCompleteQuest; // Indica si completar una misión después de la batalla
-    public string QuestToComplete; // Nombre de la misión a completar
+    public bool shouldCompleteQuest; // Indicates if a quest should be completed after the battle
+    public string QuestToComplete; // Name of the quest to complete
 
-    // Inicialización
-	void Start () {
-        // Establece el contador entre batallas con un rango aleatorio
+    // Initialization
+    void Start () {
+        // Sets the counter between battles to a random range
         betweenBattleCounter = Random.Range(timeBetweenBattles * .5f, timeBetweenBattles * 1.5f);
-	}
-	
-	// Se llama una vez por frame
-	void Update () {
-		// Si el jugador está en el área y puede moverse
-		if(inArea && PlayerController.instance.canMove)
+    }
+    
+    // Called once per frame
+    void Update () {
+        // If the player is in the area and can move
+        if(inArea && PlayerController.instance.canMove)
         {
-            // Si el jugador está en movimiento (usando teclado o joystick)
+            // If the player is moving (using keyboard or joystick)
             if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0 || PlayerController.instance.joystick.Horizontal != 0 || PlayerController.instance.joystick.Vertical != 0)
             {
-                betweenBattleCounter -= Time.deltaTime; // Disminuye el contador entre batallas
+                betweenBattleCounter -= Time.deltaTime; // Decreases the counter between battles
             }
 
-            // Si el contador llega a 0, inicia una batalla
+            // If the counter reaches 0, start a battle
             if(betweenBattleCounter <= 0)
             {
-                // Reinicia el contador entre batallas con un nuevo valor aleatorio
+                // Resets the counter between battles with a new random value
                 betweenBattleCounter = Random.Range(timeBetweenBattles * .5f, timeBetweenBattles * 1.5f);
 
-                // Inicia la batalla
+                // Starts the battle
                 StartCoroutine(StartBattleCo());
             }
         }
-	}
+    }
 
-    // Se llama cuando el jugador entra en el área de activación
+    // Called when the player enters the activation area
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player") // Verifica si el objeto que entra es el jugador
+        if(other.tag == "Player") // Checks if the object entering is the player
         {
-            if (activateOnEnter) // Si la batalla debe activarse al entrar
+            if (activateOnEnter) // If the battle should activate on entering
             {
-                StartCoroutine(StartBattleCo()); // Inicia la batalla
+                StartCoroutine(StartBattleCo()); // Start the battle
             }
             else
             {
-                inArea = true; // Marca que el jugador está en el área
+                inArea = true; // Marks that the player is in the area
             }
         }
     }
 
-    // Se llama cuando el jugador sale del área de activación
+    // Called when the player exits the activation area
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.tag == "Player") // Verifica si el objeto que sale es el jugador
+        if (other.tag == "Player") // Checks if the object exiting is the player
         {
-            if (activateOnExit) // Si la batalla debe activarse al salir
+            if (activateOnExit) // If the battle should activate on exiting
             {
-                StartCoroutine(StartBattleCo()); // Inicia la batalla
+                StartCoroutine(StartBattleCo()); // Start the battle
             }
             else
             {
-                inArea = false; // Marca que el jugador ha salido del área
+                inArea = false; // Marks that the player has left the area
             }
         }
     }
 
-    // Corrutina que maneja el inicio de la batalla
+    // Coroutine that handles starting the battle
     public IEnumerator StartBattleCo()
     {
-        UIFade.instance.FadeToBlack(); // Inicia la transición a pantalla negra
-        GameManager.instance.battleActive = true; // Marca que la batalla está activa
+        UIFade.instance.FadeToBlack(); // Starts the transition to a black screen
+        GameManager.instance.battleActive = true; // Marks that the battle is active
 
-        int selectedBattle = Random.Range(0, potentialBattles.Length); // Selecciona una batalla aleatoria de las posibles
+        int selectedBattle = Random.Range(0, potentialBattles.Length); // Selects a random battle from the potential ones
 
-        // Establece las recompensas para la batalla seleccionada
+        // Sets the rewards for the selected battle
         BattleManager.instance.rewardItems = potentialBattles[selectedBattle].rewardItems;
         BattleManager.instance.rewardXP = potentialBattles[selectedBattle].rewardXP;
 
-        yield return new WaitForSeconds(1.5f); // Espera un breve momento antes de iniciar la batalla
+        yield return new WaitForSeconds(1.5f); // Waits briefly before starting the battle
 
-        // Inicia la batalla con los enemigos seleccionados y la opción de huir
+        // Starts the battle with the selected enemies and the option to flee
         BattleManager.instance.BattleStart(potentialBattles[selectedBattle].enemies, cannotFlee);
-        UIFade.instance.FadeFromBlack(); // Finaliza la transición desde la pantalla negra
+        UIFade.instance.FadeFromBlack(); // Ends the transition from the black screen
 
-        if(deactivateAfterStarting) // Si se debe desactivar el objeto después de iniciar la batalla
+        if(deactivateAfterStarting) // If the object should deactivate after starting the battle
         {
-            gameObject.SetActive(false); // Desactiva este objeto
+            gameObject.SetActive(false); // Deactivates this object
         }
 
-        // Marca la misión como completada si es necesario
+        // Marks the quest as complete if necessary
         BattleReward.instance.markQuestComplete = shouldCompleteQuest;
         BattleReward.instance.questToMark = QuestToComplete;
     }
