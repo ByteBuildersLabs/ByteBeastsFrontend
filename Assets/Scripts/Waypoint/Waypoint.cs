@@ -29,6 +29,12 @@ public class Waypoint : MonoBehaviour
         ActualPosition = transform.position;
     }
 
+    // This method returns the position to move the npc to based on the index of the point in the array.
+    public Vector3 GetMovementPosition(int index)
+    {
+        return points[index] + ActualPosition;
+    }
+
     // OnDrawGizmos is called by Unity to draw Gizmos in the Scene view, useful for visual debugging.
     private void OnDrawGizmos()
     {   
