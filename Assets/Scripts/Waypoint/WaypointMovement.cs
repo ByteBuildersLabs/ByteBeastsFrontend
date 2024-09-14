@@ -11,23 +11,23 @@ public enum MovementDirection {
 // This class controls the movement of a GameObject along a series of waypoints.
 public class WaypointMovement : MonoBehaviour
 {   
-    // Movement direction of the character (Horizontal or Vertical), configurable from the Inspector.
-    [SerializeField] private MovementDirection direction;
-
     // Speed at which the character moves between waypoints, configurable from the Inspector.
-    [SerializeField] private float speed;
+    [SerializeField] protected float speed;
 
     // Property that calculates the next target point from the Waypoint component based on the current index.
     public Vector3 NextPoint => _waypoint.GetMovementPosition(currentPointIndex);
 
     // Reference to the Waypoint component attached to the same GameObject.
-    private Waypoint _waypoint;
+    protected Waypoint _waypoint;
 
     // Index of the current point the character is moving towards.
-    private int currentPointIndex;
+    protected int currentPointIndex;
 
     // Stores the last position of the character, used for determining movement direction for animations.
-    private Vector3 lastPosition;
+    protected Vector3 lastPosition;
+
+    //Reference to the Animator component attached to the same GameObject.
+    protected Animator _animator;
 
     // Start is called before the first frame update.
     void Start()
@@ -37,6 +37,9 @@ public class WaypointMovement : MonoBehaviour
 
         // Get the Waypoint component attached to this GameObject.
         _waypoint = GetComponent<Waypoint>();
+
+        // Get the Animator component attached to this GameObject.
+        _animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame.
@@ -45,8 +48,9 @@ public class WaypointMovement : MonoBehaviour
         // Moves the character towards the current target point.
         MoveCharacter();
 
-        // Rotates the character's animation based on movement direction (only if Horizontal).
-        RotateCharacterAnimation();
+        // Rotates the character's animation based on movement direction.
+        RotateCharacterAnimationHorizontal();
+        RotateCharacterAnimationVertical();
 
         // Checks if the character has reached the current target point.
         if (CheckCurrentPointReached())
@@ -99,20 +103,13 @@ public class WaypointMovement : MonoBehaviour
     }
 
     // Handles the rotation of the character based on the direction they are moving.
-    private void RotateCharacterAnimation()
+    protected virtual void RotateCharacterAnimationHorizontal()
     {
-        // Only rotate the character if the movement direction is horizontal.
-        if (direction != MovementDirection.Horizontal) return;
+        
+    }
 
-        // If the next point is to the right of the last position, face right.
-        if (NextPoint.x > lastPosition.x) 
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-        else
-        {   
-            // If the next point is to the left of the last position, face left.
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+    protected virtual void RotateCharacterAnimationVertical()
+    {
+        
     }
 }
