@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 1
   movesAvailable: []
-  charName: Mike
+  charName: Tim
   currentHp: 0
   maxHP: 0
   currentMP: 0

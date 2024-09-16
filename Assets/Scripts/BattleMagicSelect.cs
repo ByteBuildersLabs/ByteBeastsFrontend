@@ -3,25 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BattleMagicSelect : MonoBehaviour
-{
+public class BattleMagicSelect : MonoBehaviour {
 
     public string spellName;
     public int spellCost;
     public Text nameText;
     public Text costText;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 
     public void Press()
     {
@@ -30,8 +27,7 @@ public class BattleMagicSelect : MonoBehaviour
             BattleManager.instance.magicMenu.SetActive(false);
             BattleManager.instance.OpenTargetMenu(spellName);
             BattleManager.instance.activeBattlers[BattleManager.instance.currentTurn].currentMP -= spellCost;
-        }
-        else
+        } else
         {
             //let player know there is not enough MP
             BattleManager.instance.battleNotice.theText.text = "Not Enough MP!";
