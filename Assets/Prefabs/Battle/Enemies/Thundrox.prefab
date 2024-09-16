@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 212612185695992934}
   - component: {fileID: 114895784032005762}
   m_Layer: 0
-  m_Name: Spider
+  m_Name: Thundrox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962906933442992}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.6795807, y: -0.16414165, z: 0.0078047086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &212612185695992934
 SpriteRenderer:
@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 403533184, guid: 026325cf323264d4487d46071bb1fc57, type: 3}
+  m_Sprite: {fileID: -991456056, guid: 026325cf323264d4487d46071bb1fc57, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.5428572, y: 2.3142858}
+  m_Size: {x: 1.1875, y: 1.6875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -101,15 +101,15 @@ MonoBehaviour:
   movesAvailable:
   - Slash
   - Plasma
-  charName: Spider
-  currentHp: 150
-  maxHP: 150
-  currentMP: 0
-  maxMP: 0
+  charName: Thundrox
+  currentHp: 100
+  maxHP: 100
+  currentMP: 2
+  maxMP: 2
   strength: 5
-  defence: 5
+  defence: 10
   wpnPower: 5
-  armrPower: 5
+  armrPower: 10
   hasDied: 0
   theSprite: {fileID: 212612185695992934}
   deadSprite: {fileID: 0}

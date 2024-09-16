@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class CameraController : MonoBehaviour {
+public class CameraController : MonoBehaviour
+{
 
     // Target that the camera will follow
     public Transform target;
@@ -24,7 +25,8 @@ public class CameraController : MonoBehaviour {
     private bool musicStarted;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         // Set the target to be the player object
         // target = PlayerController.instance.transform;
         target = FindObjectOfType<PlayerController>().transform;
@@ -41,9 +43,10 @@ public class CameraController : MonoBehaviour {
         // Set the bounds for the player to keep them within the map limits
         PlayerController.instance.SetBounds(theMap.localBounds.min, theMap.localBounds.max);
     }
-    
+
     // LateUpdate is called once per frame after Update
-    void LateUpdate () {
+    void LateUpdate()
+    {
         // Update the camera's position to follow the target
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
 
@@ -51,7 +54,8 @@ public class CameraController : MonoBehaviour {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
 
         // Play background music if it hasn't been started yet
-        if (!musicStarted) {
+        if (!musicStarted)
+        {
             musicStarted = true;
             AudioManager.instance.PlayBGM(musicToPlay);
         }

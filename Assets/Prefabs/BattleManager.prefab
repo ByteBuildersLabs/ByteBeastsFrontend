@@ -493,7 +493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: -39}
+  m_AnchoredPosition: {x: 0, y: -39}
   m_SizeDelta: {x: 185.3, y: 46.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222575944936842540
@@ -531,7 +531,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 70
-    m_Alignment: 2
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 4314724862302628}
   - component: {fileID: 212160441484900770}
   m_Layer: 0
-  m_Name: Eyeball
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,8 +1070,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 988d560df8d322a468c97243cbfd76e8, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 1497860745, guid: fe70838e693d52a4e894041fa05d3e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1116,10 +1116,10 @@ RectTransform:
   - {fileID: 224061557774714994}
   m_Father: {fileID: 224901096293846776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 112.65, y: -33.45}
-  m_SizeDelta: {x: 185.3, y: 46.9}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 240, y: 46.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222610242772166162
 CanvasRenderer:
@@ -1156,7 +1156,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 70
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1276,10 +1276,10 @@ RectTransform:
   - {fileID: 224860173845744936}
   m_Father: {fileID: 224663441757114318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 630, y: -180}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222552739263765528
 CanvasRenderer:
@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 4702194859884652}
   - component: {fileID: 212277463559935290}
   m_Layer: 0
-  m_Name: Eyeball
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1447,8 +1447,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 988d560df8d322a468c97243cbfd76e8, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 1497860745, guid: fe70838e693d52a4e894041fa05d3e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1493,7 +1493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: -39}
+  m_AnchoredPosition: {x: 0, y: -39}
   m_SizeDelta: {x: 185.3, y: 46.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222685182647932670
@@ -1531,7 +1531,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 70
-    m_Alignment: 2
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1874,6 +1874,10 @@ MonoBehaviour:
   - {fileID: 114853531176991714, guid: 499b78d6beaa67b42a9e4641e043239a, type: 3}
   - {fileID: 114895784032005762, guid: 50dfc597023a36844b3918cbbcd96036, type: 3}
   - {fileID: 114816084446038158, guid: 3567c682fe182d040b1cd8c0e0fb1c50, type: 3}
+  - {fileID: 114895784032005762, guid: 1a1e07de53071ba4fa99e18cc3437146, type: 3}
+  - {fileID: 114895784032005762, guid: 2272641b409fde24d98d2215be70c7ee, type: 3}
+  - {fileID: 114895784032005762, guid: 6312ef23a54a97c419038aaaab35f26e, type: 3}
+  - {fileID: 114895784032005762, guid: a026e4e7c7580e947a7a73939be5910e, type: 3}
   activeBattlers: []
   currentTurn: 0
   turnWaiting: 0
@@ -1982,10 +1986,10 @@ RectTransform:
   - {fileID: 224872399734834502}
   m_Father: {fileID: 224663441757114318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 630, y: -70}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222516918237894966
 CanvasRenderer:
@@ -2154,7 +2158,7 @@ SpriteRenderer:
   m_SortingLayerID: -769643867
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cb2b94103310f6849b6ae8c770b66a36, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 27d87bd4b7378184aa6ab394563c50ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3039,7 +3043,7 @@ SpriteRenderer:
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 982736122, guid: b9c89f9cfdb388844ab6b189126f0d2a, type: 3}
+  m_Sprite: {fileID: -1948025128, guid: fe70838e693d52a4e894041fa05d3e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3612,7 +3616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: -39}
+  m_AnchoredPosition: {x: 0, y: -39}
   m_SizeDelta: {x: 185.3, y: 46.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222990061296311932
@@ -3650,7 +3654,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 70
-    m_Alignment: 2
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -4174,7 +4178,7 @@ GameObject:
   - component: {fileID: 4312422416728394}
   - component: {fileID: 212723834531945218}
   m_Layer: 0
-  m_Name: Eyeball
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4235,8 +4239,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 988d560df8d322a468c97243cbfd76e8, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 1497860745, guid: fe70838e693d52a4e894041fa05d3e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4272,7 +4276,7 @@ Transform:
   m_GameObject: {fileID: 1470967836516948}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7, y: -0.14, z: 0}
+  m_LocalPosition: {x: 0.46, y: -0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4615,7 +4619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: -39}
+  m_AnchoredPosition: {x: 0, y: -39}
   m_SizeDelta: {x: 185.3, y: 46.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222158755664300628
@@ -4653,7 +4657,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 70
-    m_Alignment: 2
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -5075,7 +5079,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MP -
+  m_Text: 'MP:'
 --- !u!1 &1541221329485112
 GameObject:
   m_ObjectHideFlags: 0
@@ -5345,7 +5349,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HP -
+  m_Text: 'HP:'
 --- !u!1 &1561406316507572
 GameObject:
   m_ObjectHideFlags: 0
@@ -5960,7 +5964,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MP -
+  m_Text: 'MP:'
 --- !u!1 &1597354260861146
 GameObject:
   m_ObjectHideFlags: 0
@@ -6201,6 +6205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4966609156144174}
   - component: {fileID: 212793731882499962}
+  - component: {fileID: 7994772818361977465}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -6263,8 +6268,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 982736122, guid: b9c89f9cfdb388844ab6b189126f0d2a, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: -1948025128, guid: fe70838e693d52a4e894041fa05d3e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6275,6 +6280,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7994772818361977465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613127846117784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52ff209829fcc6409d9b8c3140c2bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1615512870009742
 GameObject:
   m_ObjectHideFlags: 0
@@ -6444,7 +6462,7 @@ GameObject:
   - component: {fileID: 4624058291765422}
   - component: {fileID: 212873265273175648}
   m_Layer: 0
-  m_Name: Eyeball
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6505,8 +6523,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 988d560df8d322a468c97243cbfd76e8, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 1497860745, guid: fe70838e693d52a4e894041fa05d3e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6551,10 +6569,10 @@ RectTransform:
   - {fileID: 224876459051275448}
   m_Father: {fileID: 224663441757114318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -70}
-  m_SizeDelta: {x: 400, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222818145972988544
 CanvasRenderer:
@@ -6914,10 +6932,10 @@ RectTransform:
   - {fileID: 224863796525004850}
   m_Father: {fileID: 224901096293846776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 812.4167, y: -33.45}
-  m_SizeDelta: {x: 185.3, y: 46.9}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 240, y: 46.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222777938575795166
 CanvasRenderer:
@@ -6954,7 +6972,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 70
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -7632,7 +7650,7 @@ Transform:
   m_GameObject: {fileID: 1755974723607796}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.2, y: -1.41, z: 0}
+  m_LocalPosition: {x: 1.75, y: -1.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7946,7 +7964,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MP -
+  m_Text: 'MP:'
 --- !u!1 &1773247249237874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8116,7 +8134,7 @@ GameObject:
   - component: {fileID: 4573508194714482}
   - component: {fileID: 212200237081117518}
   m_Layer: 0
-  m_Name: Eyeball
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8177,8 +8195,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 988d560df8d322a468c97243cbfd76e8, type: 3}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 1497860745, guid: fe70838e693d52a4e894041fa05d3e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8767,7 +8785,7 @@ GameObject:
   - component: {fileID: 4613892109264918}
   - component: {fileID: 212958178512131722}
   m_Layer: 0
-  m_Name: Eyeball
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8829,7 +8847,7 @@ SpriteRenderer:
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: 988d560df8d322a468c97243cbfd76e8, type: 3}
+  m_Sprite: {fileID: 1497860745, guid: fe70838e693d52a4e894041fa05d3e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8865,7 +8883,7 @@ Transform:
   m_GameObject: {fileID: 1905694550293004}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.77, y: -1.45, z: 0}
+  m_LocalPosition: {x: -0.77, y: -1.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9102,7 +9120,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HP -
+  m_Text: 'HP:'
 --- !u!1 &1943750715585578
 GameObject:
   m_ObjectHideFlags: 0
@@ -9137,10 +9155,10 @@ RectTransform:
   - {fileID: 224954613939000736}
   m_Father: {fileID: 224901096293846776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 462.53333, y: -33.45}
-  m_SizeDelta: {x: 185.3, y: 46.9}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 240.3, y: 46.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222509192163164068
 CanvasRenderer:
@@ -9177,7 +9195,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 70
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -9642,7 +9660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HP -
+  m_Text: 'HP:'
 --- !u!1 &1972797124630192
 GameObject:
   m_ObjectHideFlags: 0
@@ -9715,8 +9733,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 971942665
   m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 982736122, guid: b9c89f9cfdb388844ab6b189126f0d2a, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -1948025128, guid: fe70838e693d52a4e894041fa05d3e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9761,7 +9779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: -39}
+  m_AnchoredPosition: {x: 0, y: -39}
   m_SizeDelta: {x: 185.3, y: 46.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222699908100889754
@@ -9799,7 +9817,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 70
-    m_Alignment: 2
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -9991,7 +10009,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: -39}
+  m_AnchoredPosition: {x: 0, y: -39}
   m_SizeDelta: {x: 185.3, y: 46.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &222713399258765388
@@ -10029,7 +10047,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 70
-    m_Alignment: 2
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
