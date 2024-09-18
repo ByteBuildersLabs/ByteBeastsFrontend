@@ -35,15 +35,22 @@ public class DialogueManager : Singleton<DialogueManager>
         // If there is no current NPC, do nothing.
         if (currentNPC == null) return;
 
-        // When the "E" key is pressed, set up the dialogue panel with the NPC's dialogue.
-        if (Input.GetKeyDown(KeyCode.E))
+        // Handle input for both PC (keyboard) and mobile (touch).
+        HandleInput();
+    }
+
+    // Handles both keyboard and touch input for starting and progressing dialogues.
+    private void HandleInput()
+    {
+        // Check for input to start the dialogue panel (initial touch or key press).
+        if (Input.GetKeyDown(KeyCode.E) || TouchDetected())
         {
             SetPanel(currentNPC.Dialogue);
         }
 
-        // When the "Space" key is pressed, handle dialogue progression.
-        if (Input.GetKeyDown(KeyCode.Space))
-        {   
+        // Check for input to advance dialogue (space key or touch anywhere on the screen).
+        if (Input.GetKeyDown(KeyCode.Space) || TouchDetected())
+        {
             // If it's time to say goodbye, close the dialogue panel.
             if (showGoodBye)
             {
@@ -58,6 +65,22 @@ public class DialogueManager : Singleton<DialogueManager>
                 DisplayNextDialogue();
             }
         }
+    }
+
+    // Method to detect if the player has touched the screen.
+    private bool TouchDetected()
+    {
+        // Check if there is at least one touch on the screen.
+        if (Input.touchCount > 0)
+        {
+            // Check if the touch just began, meaning the player just tapped the screen.
+            Touch touch = Input.GetTouch(0); // Get the first touch
+            if (touch.phase == TouchPhase.Began)
+            {
+                return true; // A touch was detected, returning true.
+            }
+        }
+        return false; // No touch detected.
     }
 
     // Opens or closes the dialogue panel.
