@@ -23,6 +23,8 @@ public class DialogueManager : Singleton<DialogueManager>
     private bool animatedDialogue;
     private bool showGoodBye;
 
+    private bool isDialogueActive = false; // Flag to track if the dialogue panel is active.
+
     // Called at the start of the game, initializes the dialogue queue.
     private void Start()
     {
@@ -43,19 +45,21 @@ public class DialogueManager : Singleton<DialogueManager>
     private void HandleInput()
     {
         // Check for input to start the dialogue panel (initial touch or key press).
-        if (Input.GetKeyDown(KeyCode.E) || TouchDetected())
+        if (!isDialogueActive && (Input.GetKeyDown(KeyCode.E) || TouchDetected()))
         {
-            SetPanel(currentNPC.Dialogue);
+            SetPanel(currentNPC.Dialogue); // Only start the dialogue if it's not active.
+            isDialogueActive = true; // Set the flag to true after starting the dialogue.
         }
 
         // Check for input to advance dialogue (space key or touch anywhere on the screen).
-        if (Input.GetKeyDown(KeyCode.Space) || TouchDetected())
+        if (isDialogueActive && (Input.GetKeyDown(KeyCode.Space) || TouchDetected()))
         {
             // If it's time to say goodbye, close the dialogue panel.
             if (showGoodBye)
             {
                 OpenDialoguePanel(false);
                 showGoodBye = false;
+                isDialogueActive = false; // Reset the flag when the dialogue is closed.
                 return;
             }
 
