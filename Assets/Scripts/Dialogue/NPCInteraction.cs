@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Search;
 
 // This class handles the interaction logic between an NPC and the player.
 public class NPCInteraction : MonoBehaviour
