@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BattleReward : MonoBehaviour {
+public class BattleReward : MonoBehaviour
+{
 
     public static BattleReward instance;
 
@@ -11,33 +12,35 @@ public class BattleReward : MonoBehaviour {
     public GameObject rewardScreen;
 
     public string[] rewardItems;
-    public int xpEarned;
+    //public int xpEarned;
 
     public bool markQuestComplete;
     public string questToMark;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         instance = this;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.Y))
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Y))
         {
             OpenRewardScreen(54, new string[] { "Iron sword", "Iron Armor" });
         }
-	}
+    }
 
     public void OpenRewardScreen(int xp, string[] rewards)
     {
-        xpEarned = xp;
+        // xpEarned = xp;
         rewardItems = rewards;
 
-        xpText.text = "Everyone earned " + xpEarned + " xp!";
+        // xpText.text = "Everyone earned " + xpEarned + " xp!";
         itemText.text = "";
 
-        for(int i = 0; i < rewardItems.Length; i++)
+        for (int i = 0; i < rewardItems.Length; i++)
         {
             itemText.text += rewards[i] + "\n";
         }
@@ -47,6 +50,7 @@ public class BattleReward : MonoBehaviour {
 
     public void CloseRewardScreen()
     {
+        /*
         for(int i = 0; i < GameManager.instance.playerStats.Length; i++)
         {
             if(GameManager.instance.playerStats[i].gameObject.activeInHierarchy)
@@ -54,8 +58,9 @@ public class BattleReward : MonoBehaviour {
                 GameManager.instance.playerStats[i].AddExp(xpEarned);
             }
         }
+        */
 
-        for(int i = 0; i < rewardItems.Length; i++)
+        for (int i = 0; i < rewardItems.Length; i++)
         {
             GameManager.instance.AddItem(rewardItems[i]);
         }
@@ -63,7 +68,7 @@ public class BattleReward : MonoBehaviour {
         rewardScreen.SetActive(false);
         GameManager.instance.battleActive = false;
 
-        if(markQuestComplete)
+        if (markQuestComplete)
         {
             QuestManager.instance.MarkQuestComplete(questToMark);
         }
