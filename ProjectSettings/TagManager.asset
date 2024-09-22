@@ -72,3 +72,6 @@ TagManager:
   - name: MobileButtons
     uniqueID: 3192607739
     locked: 0
+  - name: beast
+    uniqueID: 1093170021
+    locked: 0
