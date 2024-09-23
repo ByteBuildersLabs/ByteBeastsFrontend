@@ -23,6 +23,12 @@ public class DialogueManager : Singleton<DialogueManager>
     private bool animatedDialogue;
     private bool showGoodBye;
 
+    private bool isDialogueActive = false; // Flag to track if the dialogue panel is active.
+
+    private float lastTapTime = 0f;  // Time when the last tap occurred.
+    private float doubleTapTime = 0.3f;  // Max time allowed between two taps to consider it a double tap.
+
+
     // Called at the start of the game, initializes the dialogue queue.
     private void Start()
     {
@@ -43,19 +49,21 @@ public class DialogueManager : Singleton<DialogueManager>
     private void HandleInput()
     {
         // Check for input to start the dialogue panel (initial touch or key press).
-        if (Input.GetKeyDown(KeyCode.E) || TouchDetected())
+        if (!isDialogueActive && (Input.GetKeyDown(KeyCode.E) || DoubleTapDetected()))
         {
-            SetPanel(currentNPC.Dialogue);
+            SetPanel(currentNPC.Dialogue); // Only start the dialogue if it's not active.
+            isDialogueActive = true; // Set the flag to true after starting the dialogue.
         }
 
         // Check for input to advance dialogue (space key or touch anywhere on the screen).
-        if (Input.GetKeyDown(KeyCode.Space) || TouchDetected())
+        if (isDialogueActive && (Input.GetKeyDown(KeyCode.Space) || TouchDetected()))
         {
             // If it's time to say goodbye, close the dialogue panel.
             if (showGoodBye)
             {
                 OpenDialoguePanel(false);
                 showGoodBye = false;
+                isDialogueActive = false; // Reset the flag when the dialogue is closed.
                 return;
             }
 
@@ -81,6 +89,33 @@ public class DialogueManager : Singleton<DialogueManager>
             }
         }
         return false; // No touch detected.
+    }
+
+    // Detects if the player has performed a double tap on the screen.
+    private bool DoubleTapDetected()
+    {
+        if (Input.touchCount == 1)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            // Detect if the touch just began (first tap).
+            if (touch.phase == TouchPhase.Began)
+            {
+                // Check if the time between the current tap and the last tap is within the allowed double-tap time window.
+                if (Time.time - lastTapTime < doubleTapTime)
+                {
+                    // Reset the last tap time and confirm double tap detected.
+                    lastTapTime = 0f;  
+                    return true;  // Double tap detected.
+                }
+                else
+                {
+                    // If too much time has passed, consider this the first tap and update the lastTapTime.
+                    lastTapTime = Time.time;
+                }
+            }
+        }
+        return false;  // No double tap detected.
     }
 
     // Opens or closes the dialogue panel.
