@@ -16,8 +16,7 @@ MonoBehaviour:
   npcIcon: {fileID: 21300000, guid: 72b7fa761a6e85542bc5c75bcf7b4386, type: 3}
   hasInteraction: 0
   npcInteractionType: 0
-  Greeting: Hi traveler
+  Greeting: Hello!
   Conversation:
-  - Dialogue: This is the entrance to the feared cave where beasts and a giant dragon
-      live.
-  GoodBye: DON'T go into the cave
+  - Dialogue: This is a very friendly town, right?
+  GoodBye: See you!

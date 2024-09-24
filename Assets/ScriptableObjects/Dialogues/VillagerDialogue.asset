@@ -16,11 +16,8 @@ MonoBehaviour:
   npcIcon: {fileID: 21300000, guid: 7fd0bd3c0a118fe408e43787f5c33aaa, type: 3}
   hasInteraction: 0
   npcInteractionType: 0
-  Greeting: Hello traveler
+  Greeting: Hello sir!
   Conversation:
-  - Dialogue: My grandfather told me about brave travelers who enter the forest in
-      search of adventure.
-  - Dialogue: Crossing the bridge is the entrance to a dangerous cavern.
-  - Dialogue: Legend says that ferocious beasts live inside.
-  - Dialogue: I am very afraid to enter, if I were you I would leave here.
+  - Dialogue: With me you can buy provisions before going on an adventure to the
+      forest
   GoodBye: Good luck!
