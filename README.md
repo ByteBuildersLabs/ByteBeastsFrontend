@@ -13,7 +13,7 @@ Start by forking this repository to your GitHub account.
 After forking, clone the repository to your local machine:
    ```bash
    git clone https://github.com/your-user/ByteBeastsFrontend.git
-   cd ByteBeastBackend
+   cd ByteBeastsFrontend
    ```
 
 ### 3. Create a New Branch
