@@ -4,7 +4,7 @@ This is the Unity Frontend for ByteBeast
 
 ## Contributing
 
-Thank you for considering contributing to this project! We appreciate your time and effort in improving our work. Below are the guidelines to help you contribute effectively, but first, join our [Telegram](https://t.me/+-84e2pqLtqNkZDAx)
+Thank you for considering contributing to this project! We appreciate your time and effort in improving our work. Below are the guidelines to help you contribute effectively, but first, join to our [Telegram](https://t.me/+-84e2pqLtqNkZDAx) contributors group.
 
 ### 1. Fork the Repository
 Start by forking this repository to your GitHub account.
@@ -12,7 +12,7 @@ Start by forking this repository to your GitHub account.
 ### 2. Clone Your Fork
 After forking, clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-user/ByteBeastsBackend.git
+   git clone https://github.com/your-user/ByteBeastsFrontend.git
    cd ByteBeastBackend
    ```
 
