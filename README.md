@@ -1,77 +1,62 @@
 
 # ByteBeasts Frontend
-- This is the Unity Frontend for ByteBeast Game -- This is work in progress
-
-for better idea of the project look this: https://miro.com/welcomeonboard/Tm13OHBCa0VtR1MwaWFrcnRWM1lscUN3RExLclc0cEMyem1ia3lDQ1p2WmtIbnYzdGF4NGQ2aW5GV2tleHFKQXwzNDU4NzY0NTk5MTAzMzA0OTEwfDI=?share_link_id=866895323732
+This is the Unity Frontend for ByteBeast
 
 ## Contributing
 
-We welcome contributions to the ByteBeasts Frontend project! To get started, please follow these guidelines:
+Thank you for considering contributing to this project! We appreciate your time and effort in improving our work. Below are the guidelines to help you contribute effectively, but first, join our [Telegram](https://t.me/+-84e2pqLtqNkZDAx)
 
 ### 1. Fork the Repository
-1. Navigate to the [ByteBeasts Frontend repository](https://github.com/ByteBuildersLabs/ByteBeastsFrontend).
-2. Click on the "Fork" button in the top-right corner of the page to create your own copy of the repository.
+Start by forking this repository to your GitHub account.
 
 ### 2. Clone Your Fork
-1. Open your terminal or command prompt.
-2. Clone your fork using the following command: 
+After forking, clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/ByteBeastsFrontend.git
-   ```
-3. Navigate into the cloned directory:
-   ```bash
-   cd bytebeasts-frontend
+   git clone https://github.com/your-user/ByteBeastsBackend.git
+   cd ByteBeastBackend
    ```
 
 ### 3. Create a New Branch
-Create a new branch for your work. It’s a good practice to name the branch according to the issue you’re working on:
+Create a new branch for your feature or bug fix follwing the branch naming convention:
+- For bugs: bug-fix-name
+- For new features: feat-name
+- For refactor: refactor-name
+- For docs: docs-name
    ```bash
-   git checkout -b feat/issue-description
+   git checkout -b feature-name
    ```
 
 ### 4. Make Your Changes
 Make the necessary changes to the codebase.  
-Test your changes to ensure everything works as expected.
+Test the game to ensure that everything works as expected with your changes and the game
 
 ### 5. Commit Your Changes
-1. Add the changes to the staging area:
+Add the changes to the staging area:
    ```bash
    git add .
    ```
-2. Commit your changes with a meaningful commit message:
+Commit your changes with a meaningful commit message:
    ```bash
-   git commit -m "feat: action + description"
+   git commit -m "feat: description"
    ```
    Example: 
    ```bash
    git commit -m "feat: add new character: Tom"
    ```
 
-### 6. Keep Your Fork Updated
-1. Add the original repository as a remote to keep your fork up to date:
+### 6. Push Your Changes
+Push your changes to your forked repository.:
    ```bash
-   git remote add upstream https://github.com/ByteBuildersLabs/ByteBeastsFrontend.git
-   ```
-2. Fetch the latest changes from the original repository:
-   ```bash
-   git fetch upstream
-   ```
-3. Rebase your branch onto the updated main branch to incorporate the latest changes:
-   ```bash
-   git rebase upstream/main
+   git push origin branch-name 
    ```
 
-### 7. Push Your Changes
-Push your changes to your fork:
-   ```bash
-   git push origin feat/issue-number-description
-   ```
+### 7. Submit a Pull Request
+Once your changes are ready, submit a Pull Request (PR) for review. Ensure that:
+- Your PR has a clear and descriptive title, please use the same title of the issue
+- You provide a detailed explanation of the changes made.
+- You reference any related issues (if applicable).
 
-### 8. Create a Pull Request
-1. Go to the [Pull Requests page](https://github.com/ByteBuildersLabs/ByteBeastsFrontend/pulls) on GitHub.
-2. Click the "New Pull Request" button.
-3. Select your branch and the base branch you want to merge into.
-4. Add a description of your changes and submit the pull request.
+All contributions must go through the PR review process to maintain code quality and consistency. A project maintainer will review your PR and provide feedback or merge it into the main branch.
 
 Thank you for contributing to ByteBeasts Frontend! If you have any questions, feel free to reach out to the maintainers.
 
@@ -80,13 +65,13 @@ Thank you for contributing to ByteBeasts Frontend! If you have any questions, fe
 <table>
   <tr>
     <td align="center">
-      <img src="Maintainers/Luis.jpeg" width="100px;" alt="Maintainer: Luis"/>
+      <img src="Maintainers/LuisEverai.png" width="100px;" alt="Maintainer: Luis"/>
       <br />
       <a href="https://t.me/devjimenezz22">Luis</a>
       <br />
     </td>
     <td align="center">
-      <img src="Maintainers/JuanDi.jpeg" width="100px;" alt="Maintainer: JuanDi"/>
+      <img src="Maintainers/juandiEverai.jpeg" width="100px;" alt="Maintainer: JuanDi"/>
       <br />
       <a href="https://t.me/JuanDixCode">JuanDi</a>
       <br />
@@ -94,6 +79,12 @@ Thank you for contributing to ByteBeasts Frontend! If you have any questions, fe
   </tr>
 </table>
 
-<img width="928" alt="Captura de pantalla 2024-08-05 a la(s) 6 20 29 p  m" src="https://github.com/user-attachments/assets/672227b4-4081-44cd-9e6b-d36d71925058">
-<img width="928" alt="Captura de pantalla 2024-08-05 a la(s) 6 20 54 p  m" src="https://github.com/user-attachments/assets/51c08c44-7284-403d-888a-2fda4957d996">
+<img width="928" src="Gameplay/forest1.png">
+<img width="928" src="Gameplay/forest2.png">
+<img width="928" src="Gameplay/forest3.png">
+<img width="928" src="Gameplay/town1.png">
+<img width="928" src="Gameplay/town2.png">
+<img width="928" src="Gameplay/town3.png">
+<img width="928" src="Gameplay/battle1.png">
+<img width="928" src="Gameplay/battle2.png">
 <img width="928" alt="Captura de pantalla 2024-08-05 a la(s) 6 20 20 p  m" src="https://github.com/user-attachments/assets/291e71a9-2b6f-4c51-adef-644bff46a384">
