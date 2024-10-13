@@ -45,7 +45,7 @@ TagManager:
   - name: Background
     uniqueID: 2087213285
     locked: 0
-  - name: trees
+  - name: trunks
     uniqueID: 1993540551
     locked: 0
   - name: walls
@@ -56,6 +56,9 @@ TagManager:
     locked: 0
   - name: Houses
     uniqueID: 3341544919
+    locked: 0
+  - name: foliage
+    uniqueID: 1486588345
     locked: 0
   - name: UI
     uniqueID: 1329678397
