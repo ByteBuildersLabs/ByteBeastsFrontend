@@ -304,11 +304,11 @@ public class BattleManager : MonoBehaviour
 
     public void UpdateUIStats()
     {
+        int j = 0; 
 
-        int j = 0;
-        for(int i=0; i< activeBattlers.Count; i++)
+        for (int i = 0; i < activeBattlers.Count; i++)
         {
-            if (activeBattlers[i].isPlayer && activeBattlers[i].charName !="Tim")
+            if (activeBattlers[i].isPlayer && activeBattlers[i].charName != "Tim")
             {
                 BattleChar playerData = activeBattlers[i];
 
@@ -318,44 +318,33 @@ public class BattleManager : MonoBehaviour
                 playerMP[j].text = Mathf.Clamp(playerData.currentMP, 0, int.MaxValue) + "/" + playerData.maxMP;
                 j++;
             }
-
-
         }
-        for(int k =j ; k<playerName.Length; k++)
+
+        int enemyIndex = j; 
+
+        for (int i = 0; i < activeBattlers.Count; i++)
         {
-            playerName[k].text = "-";
-            playerHP[k].text = "-";
-            playerMP[k].text = "-";
+            if (!activeBattlers[i].isPlayer && enemyIndex < playerHP.Length)
+            {
+                BattleChar enemyData = activeBattlers[i];
 
+                playerName[enemyIndex].gameObject.SetActive(true);  
+                playerName[enemyIndex].text = enemyData.charName;  
+                playerHP[enemyIndex].text = Mathf.Clamp(enemyData.currentHp, 0, int.MaxValue) + "/" + enemyData.maxHP; 
+                playerMP[enemyIndex].text = "";  // In case if enemies have MP
+
+                enemyIndex++;
+            }
         }
-        //for (int i = 0; i < playerName.Length; i++)
-        //{
-        //    if (activeBattlers.Count > i)
-        //    {
-        //        if (activeBattlers[i].isPlayer)
-        //        {
-        //            BattleChar playerData = activeBattlers[i];
 
-        //            playerName[i].gameObject.SetActive(true);
-        //            playerName[i].text = playerData.charName;
-        //            playerHP[i].text = Mathf.Clamp(playerData.currentHp, 0, int.MaxValue) + "/" + playerData.maxHP;
-        //            playerMP[i].text = Mathf.Clamp(playerData.currentMP, 0, int.MaxValue) + "/" + playerData.maxMP;
-
-        //        }
-        //        //else
-        //        //{
-        //        //    playerName[i].gameObject.SetActive(true);
-        //        //    playerName[i].text = "-";
-        //        //    playerHP[i].text = "-";
-        //        //    playerMP[i].text = "-";
-        //        //}
-        //    }
-        //    else
-        //    {
-        //        playerName[i].gameObject.SetActive(false);
-        //    }
-        //}
+        for (int k = enemyIndex; k < playerName.Length; k++)
+        {
+            playerName[k].gameObject.SetActive(false); 
+            playerHP[k].text = "-";  
+            //playerMP[k].text = "-";  //commented because enemies don't have MP
+        }
     }
+
 
     public void PlayerAttack(string moveName, int selectedTarget)
     {
