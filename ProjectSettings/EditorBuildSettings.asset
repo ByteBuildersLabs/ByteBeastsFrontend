@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Test2.unity
     guid: 5bd915d958720f445b22515b08152588
   - enabled: 1
-    path: Assets/Scenes/Countryside.unity
+    path: Assets/Scenes/Forest.unity
     guid: ae60441925334924aa23e5f811df151d
   - enabled: 1
     path: Assets/Scenes/Town.unity
@@ -30,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/GameOver.unity
     guid: 246e6874ab17f8d45a7c97fbb80e3c64
   - enabled: 1
-    path: Assets/Scenes/Cave.unity
+    path: Assets/Scenes/DarkForest.unity
     guid: cd8c86dea6cbf0045a393f217b254123
   m_configObjects: {}

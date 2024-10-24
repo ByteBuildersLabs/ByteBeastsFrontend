@@ -1,10 +1,17 @@
-
 # ByteBeasts Frontend
 This is the Unity Frontend for ByteBeast
 
-## Contributing
+## Contribution guidelines
 
 Thank you for considering contributing to this project! We appreciate your time and effort in improving our work. Below are the guidelines to help you contribute effectively, but first, join to our [Telegram](https://t.me/+-84e2pqLtqNkZDAx) contributors group.
+
+To request issues please explain your background and how to resolve the issue, as well as give an estimate of the time it would take to resolve the issue.
+
+### ODHacks
+For ODHacks we will only take into account issue requests that are made through OnlyDust.
+
+### Unity Background
+Ideally we would like to receive contributors who have experience in Unity, so if you have done work in Unity leave it in the issue request. If you don't have much knowledge in Unity but want to learn, you can still contribute. In both cases, it is required that  explain very well how to solve the issue, since it will be assigned to the person who best knows how to solve it.
 
 ### 1. Fork the Repository
 Start by forking this repository to your GitHub account.
@@ -26,11 +33,21 @@ Create a new branch for your feature or bug fix follwing the branch naming conve
    git checkout -b feature-name
    ```
 
-### 4. Make Your Changes
+### 4. How run the project in Unity?
+
+- Install [Unity](https://unity.com/download)
+
+- Open de Unity Hub and run the project with the version 2022.3.28.f1
+
+- Go to file/Build Settings and make sure that platform to run the project is WebGL
+
+- After this, you now can run the project, if you have any issue running the project please contact with the maintainers
+
+### 5. Make Your Changes
 Make the necessary changes to the codebase.  
 Test the game to ensure that everything works as expected with your changes and the game
 
-### 5. Commit Your Changes
+### 6. Commit Your Changes
 Add the changes to the staging area:
    ```bash
    git add .
@@ -44,13 +61,13 @@ Commit your changes with a meaningful commit message:
    git commit -m "feat: add new character: Tom"
    ```
 
-### 6. Push Your Changes
+### 7. Push Your Changes
 Push your changes to your forked repository.:
    ```bash
    git push origin branch-name 
    ```
 
-### 7. Submit a Pull Request
+### 8. Submit a Pull Request
 Once your changes are ready, submit a Pull Request (PR) for review. Ensure that:
 - Your PR has a clear and descriptive title, please use the same title of the issue
 - You provide a detailed explanation of the changes made.
