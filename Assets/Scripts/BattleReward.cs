@@ -3,21 +3,53 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script manages the reward system for battles in the game.
+/// </summary>
 public class BattleReward : MonoBehaviour
 {
-
+	/// <value>
+    /// Static reference to the BattleReward instance.
+    /// </value>
     public static BattleReward instance;
 
-    public Text xpText, itemText;
+	/// <value>
+    /// Reference to the Text component displaying XP earned.
+    /// </value>
+    public Text xpText;
+
+	 /// <value>
+    /// Reference to the Text component displaying items earned.
+    /// </value>
+    public Text itemText;
+
+	/// <value>
+    /// GameObject representing the reward screen UI.
+    /// </value>
     public GameObject rewardScreen;
 
+	/// <value>
+    /// Array of item names to be displayed as rewards.
+    /// </value>
     public string[] rewardItems;
     //public int xpEarned;
 
+	/// <value>
+    /// Flag indicating whether a quest should be marked as completed.
+    /// </value>
     public bool markQuestComplete;
+
+	/// <value>
+    /// Name of the quest to be marked as completed.
+    /// </value>
     public string questToMark;
 
     // Use this for initialization
+
+	/// <summary>
+    /// Initializes the BattleReward component.
+    /// Sets up the static instance.
+    /// </summary>
     void Start()
     {
         instance = this;
@@ -32,6 +64,11 @@ public class BattleReward : MonoBehaviour
         }
     }
 
+	/// <summary>
+    /// Opens the reward screen with the given XP and items earned.
+    /// </summary>
+    /// <param name="xp">Amount of XP earned.</param>
+    /// <param name="rewards">Array of item names earned.</param>
     public void OpenRewardScreen(int xp, string[] rewards)
     {
         // xpEarned = xp;
@@ -48,6 +85,9 @@ public class BattleReward : MonoBehaviour
         rewardScreen.SetActive(true);
     }
 
+	/// <summary>
+    /// Closes the reward screen and applies the rewards to the game state.
+    /// </summary>
     public void CloseRewardScreen()
     {
         /*
@@ -59,15 +99,19 @@ public class BattleReward : MonoBehaviour
             }
         }
         */
-
+		// Apply item rewards
         for (int i = 0; i < rewardItems.Length; i++)
         {
             GameManager.instance.AddItem(rewardItems[i]);
         }
 
+		// Hide the reward screen
         rewardScreen.SetActive(false);
+
+		// End the current battle
         GameManager.instance.battleActive = false;
 
+		// Mark quest as completed if necessary
         if (markQuestComplete)
         {
             QuestManager.instance.MarkQuestComplete(questToMark);
