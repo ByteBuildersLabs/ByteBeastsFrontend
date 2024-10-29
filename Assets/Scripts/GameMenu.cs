@@ -38,27 +38,6 @@ public class GameMenu : MonoBehaviour {
         if (instance == null) instance = this;
         else Destroy(gameObject);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetButtonDown("Fire2"))
-        {
-            if(theMenu.activeInHierarchy)
-            {
-                //theMenu.SetActive(false);
-                //GameManager.instance.gameMenuOpen = false;
-
-                CloseMenu();
-            } else
-            {
-                theMenu.SetActive(true);
-                UpdateMainStats();
-                GameManager.instance.gameMenuOpen = true;
-            }
-
-            AudioManager.instance.PlaySFX(5);
-        }
-	}
 
     public void UpdateMainStats()
     {
@@ -216,6 +195,13 @@ public class GameMenu : MonoBehaviour {
             itemCharChoiceNames[i].text = GameManager.instance.playerStats[i].charName;
             itemCharChoiceNames[i].transform.parent.gameObject.SetActive(GameManager.instance.playerStats[i].gameObject.activeInHierarchy);
         }
+    }
+
+    public void OpenMenu()
+    {
+        theMenu.SetActive(true);
+        UpdateMainStats();
+        GameManager.instance.gameMenuOpen = true;
     }
 
     public void CloseItemCharChoice()
