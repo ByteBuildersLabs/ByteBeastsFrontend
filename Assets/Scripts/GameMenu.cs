@@ -4,41 +4,81 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages the game menu functionality, including character stats display, item management, and menu navigation.
+/// </summary>
 public class GameMenu : MonoBehaviour {
 
+	/// <summary>
+    /// Reference to the main menu UI object.
+    /// </summary>
     public GameObject theMenu;
+
+	/// <summary>
+    /// Array of UI windows in the menu.
+    /// </summary>
     public GameObject[] windows;
 
+	/// <summary>
+    /// Array of player character stats.
+    /// </summary>
     private CharStats[] playerStats;
 
+	 /// <summary>
+    /// References to various UI elements for displaying character information.
+    /// </summary>
     public Text[] nameText, hpText, mpText, lvlText, expText;
     public Slider[] expSlider;
     public Image[] charImage;
     public GameObject[] charStatHolder;
 
+	/// <summary>
+    /// References to status buttons for each character.
+    /// </summary>
     public GameObject[] statusButtons;
 
+	 /// <summary>
+    /// References to individual status display elements.
+    /// </summary>
     public Text statusName, statusHP, statusMP, statusStr, statusDef, statusWpnEqpd, statusWpnPwr, statusArmrEqpd, statusArmrPwr, statusExp;
     public Image statusImage;
 
+	/// <summary>
+    /// References to item buttons.
+    /// </summary>
     public ItemButton[] itemButtons;
     public string selectedItem;
     public Item activeItem;
     public Text itemName, itemDescription, useButtonText;
 
+	/// <summary>
+    /// Reference to the item character choice menu.
+    /// </summary>
     public GameObject itemCharChoiceMenu;
     public Text[] itemCharChoiceNames;
 
+	/// <summary>
+    /// Singleton instance of the GameMenu class.
+    /// </summary>
     public static GameMenu instance;
 
+	/// <summary>
+    /// Name of the main menu scene.
+    /// </summary>
     public string mainMenuName;
 
-    // Use this for initialization
+    /// <summary>
+    /// Called when the script is instantiated.
+    /// Initializes the singleton instance of GameMenu.
+    /// </summary>
     void Awake () {
         if (instance == null) instance = this;
         else Destroy(gameObject);
 	}
 
+	/// <summary>
+    /// Updates the main stats display for all active characters.
+    /// </summary>
     public void UpdateMainStats()
     {
         playerStats = GameManager.instance.playerStats;
@@ -66,6 +106,10 @@ public class GameMenu : MonoBehaviour {
         }
     }
 
+	/// <summary>
+    /// Toggles visibility of a specific window in the menu.
+    /// </summary>
+    /// <param name="windowNumber">Index of the window to toggle.</param>
     public void ToggleWindow(int windowNumber)
     {
         UpdateMainStats();
@@ -84,6 +128,9 @@ public class GameMenu : MonoBehaviour {
         itemCharChoiceMenu.SetActive(false);
     }
 
+	/// <summary>
+    /// Closes the entire menu.
+    /// </summary>
     public void CloseMenu()
     {
         for(int i = 0; i < windows.Length; i++)
@@ -98,6 +145,9 @@ public class GameMenu : MonoBehaviour {
         itemCharChoiceMenu.SetActive(false);
     }
 
+	/// <summary>
+    /// Opens the status display for active characters.
+    /// </summary>
     public void OpenStatus()
     {
         UpdateMainStats();
@@ -117,6 +167,10 @@ public class GameMenu : MonoBehaviour {
         StatusChar(activeButtons[0]);
     }
 
+	/// <summary>
+    /// Displays detailed status information for a selected character.
+    /// </summary>
+    /// <param name="selected">Index of the selected character.</param>
     public void StatusChar(int selected)
     {
         statusName.text = playerStats[selected].charName;
@@ -139,6 +193,9 @@ public class GameMenu : MonoBehaviour {
 
     }
 
+	/// <summary>
+    /// Shows items held by the player.
+    /// </summary>
     public void ShowItems()
     {
         GameManager.instance.SortItems();
@@ -160,6 +217,9 @@ public class GameMenu : MonoBehaviour {
         }
     }
 
+	/// <summary>
+    /// Selects an item for use or equipping.
+    /// </summary>
     public void SelectItem(Item newItem)
     {
         activeItem = newItem;
@@ -178,6 +238,9 @@ public class GameMenu : MonoBehaviour {
         itemDescription.text = activeItem.description;
     }
 
+	/// <summary>
+    /// Discards the currently selected item.
+    /// </summary>
     public void DiscardItem()
     {
         if(activeItem != null)
@@ -186,6 +249,9 @@ public class GameMenu : MonoBehaviour {
         }
     }
 
+	/// <summary>
+    /// Opens the character selection menu for item usage.
+    /// </summary>
     public void OpenItemCharChoice()
     {
         itemCharChoiceMenu.SetActive(true);
@@ -197,6 +263,9 @@ public class GameMenu : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Closes the entire menu.
+    /// </summary>
     public void OpenMenu()
     {
         theMenu.SetActive(true);
@@ -204,28 +273,45 @@ public class GameMenu : MonoBehaviour {
         GameManager.instance.gameMenuOpen = true;
     }
 
+	/// <summary>
+    /// Closes the character selection menu for item usage.
+    /// </summary>
     public void CloseItemCharChoice()
     {
         itemCharChoiceMenu.SetActive(false);
     }
 
+	 /// <summary>
+    /// Uses the selected item on a specific character.
+    /// </summary>
+    /// <param name="selectChar">Index of the character to apply the item to.</param>
     public void UseItem(int selectChar)
     {
         activeItem.Use(selectChar);
         CloseItemCharChoice();
     }
 
+	/// <summary>
+    /// Saves the current game state.
+    /// </summary>
     public void SaveGame()
     {
         GameManager.instance.SaveData();
         QuestManager.instance.SaveQuestData();
     }
 
+	/// <summary>
+    /// Plays a button sound effect.
+    /// </summary>
     public void PlayButtonSound()
     {
         AudioManager.instance.PlaySFX(4);
     }
 
+	/// <summary>
+    /// Quits the game to the main menu scene.
+    /// Destroys various game objects and loads the main menu scene.
+    /// </summary>
     public void QuitGame()
     {
         SceneManager.LoadSceneAsync(mainMenuName);

@@ -3,31 +3,64 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manages the shop functionality in the game, including buying and selling items.
+/// </summary>
 public class Shop : MonoBehaviour {
 
+	/// <summary>
+    /// Singleton instance of the Shop manager.
+    /// </summary>
     public static Shop instance;
 
+	/// <summary>
+    /// UI elements for the shop interface.
+    /// </summary>
     public GameObject shopMenu;
     public GameObject buyMenu;
     public GameObject sellMenu;
 
+	/// <summary>
+    /// Reference to the text displaying the player's gold amount.
+    /// </summary>
     public Text goldText;
 
+	/// <summary>
+    /// Array of item names available for sale in the shop.
+    /// </summary>
     public string[] itemsForSale;
 
+	/// <summary>
+    /// Arrays of buttons for buying and selling items.
+    /// </summary>
     public ItemButton[] buyItemButtons;
     public ItemButton[] sellItemButtons;
 
+	/// <summary>
+    /// Currently selected item for purchase or sale.
+    /// </summary>
     public Item selectedItem;
+
+	/// <summary>
+    /// UI elements for displaying item details during selection.
+    /// </summary>
     public Text buyItemName, buyItemDescription, buyItemValue;
     public Text sellItemName, sellItemDescription, sellItemValue;
 
-	// Use this for initialization
+	/// <summary>
+    /// Called when the script is instantiated.
+    /// Initializes the singleton instance.
+    /// </summary>
 	void Start () {
         instance = this;
 	}
 	
 	// Update is called once per frame
+
+	/// <summary>
+    /// Called every frame after Start().
+    /// Checks for opening the shop with the K key.
+    /// </summary>
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.K) && !shopMenu.activeInHierarchy)
         {
@@ -35,6 +68,10 @@ public class Shop : MonoBehaviour {
         }
 	}
 
+	/// <summary>
+    /// Opens the shop interface.
+    /// Activates the shop menu and buy menu, sets the game state to active shop mode.
+    /// </summary>
     public void OpenShop()
     {
         shopMenu.SetActive(true);
@@ -45,12 +82,19 @@ public class Shop : MonoBehaviour {
         goldText.text = GameManager.instance.currentGold.ToString() + "g";
     }
 
+	/// <summary>
+    /// Closes the shop interface.
+    /// Deactivates the shop menu and sets the game state to inactive shop mode.
+    /// </summary>
     public void CloseShop()
     {
         shopMenu.SetActive(false);
         GameManager.instance.shopActive = false;
     }
 
+	/// <summary>
+    /// Opens the buy menu, displaying available items for purchase.
+    /// </summary>
     public void OpenBuyMenu()
     {
         buyItemButtons[0].Press();
@@ -76,6 +120,10 @@ public class Shop : MonoBehaviour {
         }
     }
 
+	/// <summary>
+    /// Selects an item for purchase, updating the UI display.
+    /// </summary>
+    /// <param name="buyItem">The item to select for purchase.</param>
     public void OpenSellMenu()
     {
         sellItemButtons[0].Press();
@@ -87,6 +135,10 @@ public class Shop : MonoBehaviour {
         
     }
 
+	/// <summary>
+    /// Displays the items available for sale in the sell menu.
+    /// Updates the UI buttons with item details.
+    /// </summary>
     private void ShowSellItems()
     {
         GameManager.instance.SortItems();
@@ -108,6 +160,10 @@ public class Shop : MonoBehaviour {
         }
     }
 
+	/// <summary>
+    /// Selects an item for purchase, updating the UI display.
+    /// </summary>
+    /// <param name="buyItem">The item to select for purchase.</param>
     public void SelectBuyItem(Item buyItem)
     {
         selectedItem = buyItem;
@@ -116,6 +172,10 @@ public class Shop : MonoBehaviour {
         buyItemValue.text = "Value: " + selectedItem.value + "g";
     }
 
+	/// <summary>
+    /// Selects an item for sale, updating the UI display.
+    /// </summary>
+    /// <param name="sellItem">The item to select for sale.</param>
     public void SelectSellItem(Item sellItem)
     {
         selectedItem = sellItem;
@@ -124,6 +184,9 @@ public class Shop : MonoBehaviour {
         sellItemValue.text = "Value: " + Mathf.FloorToInt(selectedItem.value * .5f).ToString() + "g";
     }
 
+	/// <summary>
+    /// Purchases the selected item if the player has enough gold.
+    /// </summary>
     public void BuyItem()
     {
         if (selectedItem != null)
@@ -139,6 +202,9 @@ public class Shop : MonoBehaviour {
         goldText.text = GameManager.instance.currentGold.ToString() + "g";
     }
 
+	/// <summary>
+    /// Sells the selected item, adding half its value to the player's gold.
+    /// </summary>
     public void SellItem()
     {
         if(selectedItem != null)
