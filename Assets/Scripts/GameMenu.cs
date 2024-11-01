@@ -96,7 +96,7 @@ public class GameMenu : MonoBehaviour {
                 expText[i - nonActiveChar].text = "" + playerStats[i].currentEXP + "/" + playerStats[i].expToNextLevel[playerStats[i].playerLevel];
                 expSlider[i - nonActiveChar].maxValue = playerStats[i].expToNextLevel[playerStats[i].playerLevel];
                 expSlider[i - nonActiveChar].value = playerStats[i].currentEXP;
-                charImage[i - nonActiveChar].sprite = playerStats[i].charIamge;
+                charImage[i - nonActiveChar].sprite = playerStats[i].charImage;
             } else
             {
                 Debug.Log("Disabled Stats :" + nameText[i].text);
@@ -189,7 +189,7 @@ public class GameMenu : MonoBehaviour {
         }
         statusArmrPwr.text = playerStats[selected].armrPwr.ToString();
         statusExp.text = (playerStats[selected].expToNextLevel[playerStats[selected].playerLevel] - playerStats[selected].currentEXP).ToString();
-        statusImage.sprite = playerStats[selected].charIamge;
+        statusImage.sprite = playerStats[selected].charImage;
 
     }
 
