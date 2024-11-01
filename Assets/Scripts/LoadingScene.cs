@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages the loading of scenes based on the current scene and saved data.
+/// </summary>
 public class LoadingScene : MonoBehaviour {
+	/// <summary>
+    /// Delay time before loading the next scene.
+    /// </summary>
     public float waitToLoad;
 
 	// Use this for initialization
@@ -11,7 +17,10 @@ public class LoadingScene : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
+	/// <summary>
+    /// Called every frame after Start().
+    /// Handles loading the next scene after a delay.
+    /// </summary>
 	void Update () {
 		if(waitToLoad > 0)
         {
