@@ -75,32 +75,6 @@ public class GameMenu : MonoBehaviour {
         if (instance == null) instance = this;
         else Destroy(gameObject);
 	}
-	
-	// Update is called once per frame
-
-	/// <summary>
-    /// Called every frame after Start().
-    /// Handles toggling the menu open/close state and updating character stats.
-    /// </summary>
-	void Update () {
-		if(Input.GetButtonDown("Fire2"))
-        {
-            if(theMenu.activeInHierarchy)
-            {
-                //theMenu.SetActive(false);
-                //GameManager.instance.gameMenuOpen = false;
-
-                CloseMenu();
-            } else
-            {
-                theMenu.SetActive(true);
-                UpdateMainStats();
-                GameManager.instance.gameMenuOpen = true;
-            }
-
-            AudioManager.instance.PlaySFX(5);
-        }
-	}
 
 	/// <summary>
     /// Updates the main stats display for all active characters.
@@ -287,6 +261,16 @@ public class GameMenu : MonoBehaviour {
             itemCharChoiceNames[i].text = GameManager.instance.playerStats[i].charName;
             itemCharChoiceNames[i].transform.parent.gameObject.SetActive(GameManager.instance.playerStats[i].gameObject.activeInHierarchy);
         }
+    }
+
+    /// <summary>
+    /// Closes the entire menu.
+    /// </summary>
+    public void OpenMenu()
+    {
+        theMenu.SetActive(true);
+        UpdateMainStats();
+        GameManager.instance.gameMenuOpen = true;
     }
 
 	/// <summary>
