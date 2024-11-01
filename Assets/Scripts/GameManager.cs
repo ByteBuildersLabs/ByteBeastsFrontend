@@ -3,21 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages the overall game state and essential game components.
+/// </summary>
 public class GameManager : MonoBehaviour {
 
+	/// <value>
+    /// Singleton instance of the GameManager.
+    /// </value>
     public static GameManager instance;
 
+	/// <value>
+    /// Array of character statistics.
+    /// </value>
     public CharStats[] playerStats;
 
+	/// <value>
+    /// Flags indicating the current state of various game features.
+    /// </value>
     public bool gameMenuOpen, dialogActive, fadingBetweenAreas, shopActive, battleActive;
 
+	/// <value>
+    /// Array to hold item names in the player's inventory.
+    /// </value>
     public string[] itemsHeld;
+
+	/// <value>
+    /// Array to hold the quantity of items in the player's inventory.
+    /// </value>
     public int[] numberOfItems;
+
+	/// <value>
+    /// Array of reference items for easy lookup.
+    /// </value>
     public Item[] referenceItems;
 
+	/// <value>
+    /// Current amount of gold in the player's possession.
+    /// </value>
     public int currentGold;
 
-	// Use this for initialization
+	/// <summary>
+    /// Called when the script is instantiated.
+    /// Initializes the GameManager as a singleton and sorts the player's inventory.
+    /// </summary>
 	void Start () {
         instance = this;
 
@@ -26,7 +55,10 @@ public class GameManager : MonoBehaviour {
         SortItems();
 	}
 	
-	// Update is called once per frame
+	/// <summary>
+    /// Called every frame after Start().
+    /// Updates the player's movement status based on active game features.
+    /// </summary>
 	void Update () {
 		if(gameMenuOpen || dialogActive || fadingBetweenAreas || shopActive || battleActive)
         {
@@ -56,6 +88,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+	/// <summary>
+    /// Retrieves item details from the reference array.
+    /// </summary>
+    /// <param name="itemToGrab">The name of the item to get details for.</param>
+    /// <returns>The item details if found, otherwise null.</returns>
     public Item GetItemDetails(string itemToGrab)
     {
 
@@ -73,6 +110,9 @@ public class GameManager : MonoBehaviour {
         return null;
     }
 
+	/// <summary>
+    /// Sorts the player's inventory to remove empty slots.
+    /// </summary>
     public void SortItems()
     {
         bool itemAFterSpace = true;
@@ -99,6 +139,10 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+	/// <summary>
+    /// Adds an item to the player's inventory.
+    /// </summary>
+    /// <param name="itemToAdd">The name of the item to add.</param>
     public void AddItem(string itemToAdd)
     {
         int newItemPosition = 0;
@@ -140,6 +184,10 @@ public class GameManager : MonoBehaviour {
         GameMenu.instance.ShowItems();
     }
 
+	/// <summary>
+    /// Removes an item from the player's inventory.
+    /// </summary>
+    /// <param name="itemToRemove">The name of the item to remove.</param>
     public void RemoveItem(string itemToRemove)
     {
         bool foundItem = false;
@@ -172,6 +220,9 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+	/// <summary>
+    /// Saves game data to PlayerPrefs.
+    /// </summary>
     public void SaveData()
     {
         PlayerPrefs.SetString("Current_Scene", SceneManager.GetActiveScene().name);
@@ -212,6 +263,9 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+	/// <summary>
+    /// Loads saved game data from PlayerPrefs.
+    /// </summary>
     public void LoadData()
     {
         PlayerController.instance.transform.position = new Vector3(PlayerPrefs.GetFloat("Player_Position_x"), PlayerPrefs.GetFloat("Player_Position_y"), PlayerPrefs.GetFloat("Player_Position_z"));

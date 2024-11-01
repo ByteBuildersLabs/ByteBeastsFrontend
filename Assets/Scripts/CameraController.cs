@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+/// <summary>
+/// Manages the camera behavior in the game, including following the player and maintaining bounds.
+/// </summary>
 public class CameraController : MonoBehaviour
 {
 
@@ -24,7 +27,10 @@ public class CameraController : MonoBehaviour
     public int musicToPlay;
     private bool musicStarted;
 
-    // Use this for initialization
+    /// <summary>
+    /// Initializes the CameraController component.
+    /// Sets up the camera target, calculates its bounds, and configures the player's movement limits.
+    /// </summary>
     void Start()
     {
         // Set the target to be the player object
@@ -44,7 +50,11 @@ public class CameraController : MonoBehaviour
         PlayerController.instance.SetBounds(theMap.localBounds.min, theMap.localBounds.max);
     }
 
-    // LateUpdate is called once per frame after Update
+	/// <summary>
+    /// Called once per frame after Update.
+    /// Updates the camera's position to follow the target and ensures it stays within the defined bounds.
+    /// Also plays background music if it hasn't been started yet.
+    /// </summary>
     void LateUpdate()
     {
         // Update the camera's position to follow the target
