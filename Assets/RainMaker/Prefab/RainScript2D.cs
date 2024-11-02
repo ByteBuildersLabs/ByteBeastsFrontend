@@ -6,6 +6,7 @@
 using UnityEngine;
 using System.Collections;
 using static UnityEngine.ParticleSystem;
+using UnityEngine.SceneManagement;
 
 namespace DigitalRuby.RainMaker
 {
@@ -25,6 +26,9 @@ namespace DigitalRuby.RainMaker
         private Vector2 initialStartSpeedExplosion;
         private Vector2 initialStartSizeExplosion;
         private readonly ParticleSystem.Particle[] particles = new ParticleSystem.Particle[2048];
+        private Camera mainCamera;
+        private AudioSource audioSource;
+        private bool isRainingInCurrentScene = false;
 
         [Tooltip("The starting y offset for rain and mist. This will be offset as a percentage of visible height from the top of the visible world.")]
         public float RainHeightMultiplier = 0.15f;
@@ -65,19 +69,105 @@ namespace DigitalRuby.RainMaker
 
         private void Awake()
         {
-            // Implements the Singleton pattern to avoid duplicates of the rainfall system.
-            if (instance == null)
+            // Only assign the Singleton if we are in the scene that requires rain.
+            if (instance == null && SceneManager.GetActiveScene().name.Contains("DarkForest"))
             {
                 instance = this;
-                DontDestroyOnLoad(gameObject); // Keep this object between scenes
+                SceneManager.sceneLoaded += OnSceneLoaded;
+            }
+            else if (instance != this)
+            {
+                Destroy(gameObject); // Update the camera reference in each scene
+            }
+        }
+        private void OnDestroy()
+        {
+            if (instance == this)
+            {
+                SceneManager.sceneLoaded -= OnSceneLoaded;
+            }
+        }
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            // Update camera reference in each scene
+            mainCamera = Camera.main;
 
+            // Activate or deactivate the rain according to the scene
+            if (scene.name.Contains("DarkForest"))
+            {
+                EnableRain();
+                isRainingInCurrentScene = true;
             }
             else
             {
-                Destroy(gameObject); // Destroys duplicate instances
+                DisableRain();
+                isRainingInCurrentScene = false;
+                Destroy(gameObject); // Destroy the object if we leave the rain scene.
             }
         }
-     
+
+
+        private void EnableRain()
+        {
+            // Ensure that the particle system and rain sound are active.
+            if (!RainFallParticleSystem.isPlaying)
+            {
+                RainFallParticleSystem.Clear();
+                RainFallParticleSystem.Play();
+            }
+
+            if (audioSource != null && !audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
+        }
+
+        private void DisableRain()
+        {
+            // Stop the particle system and the rain sound
+            if (RainFallParticleSystem.isPlaying)
+            {
+                RainFallParticleSystem.Stop();
+            }
+
+            if (audioSource != null && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
+
+        private void LateUpdate()
+        {
+            // Check that the camera reference is updated
+            if (mainCamera == null)
+            {
+                mainCamera = Camera.main;
+                if (mainCamera == null)
+                {
+                    Debug.LogWarning("Main Camera not found. RainScript2D will wait until a camera is available.");
+                    return; // Salir si no se encuentra la cámara, evitará que el resto del código se ejecute
+                }
+            }
+
+            // Controlling the positioning of the particles to follow the camera
+            if (FollowCamera && mainCamera != null)
+            {
+                transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, transform.position.z);
+            }
+        }
+
+        private void OnDisable()
+        {
+            // Make sure to stop the rain when the script is deactivated (e.g., when changing scenes).
+            if (!isRainingInCurrentScene)
+            {
+                DisableRain();
+            }
+        }
+
+
+
+
 
 
         private void TransformParticleSystem(ParticleSystem p, Vector2 initialStartSpeed, Vector2 initialStartSize)
