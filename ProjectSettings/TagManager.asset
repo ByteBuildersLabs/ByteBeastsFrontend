@@ -60,6 +60,9 @@ TagManager:
   - name: foliage
     uniqueID: 1486588345
     locked: 0
+  - name: RainEffect
+    uniqueID: 694142747
+    locked: 0
   - name: UI
     uniqueID: 1329678397
     locked: 0
