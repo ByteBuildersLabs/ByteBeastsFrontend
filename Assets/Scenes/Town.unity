@@ -53357,12 +53357,12 @@ PrefabInstance:
     - target: {fileID: 700643566047416527, guid: d5abc895c284ea44aaf79bc56af78601,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0610726
+      value: 7.686799
       objectReference: {fileID: 0}
     - target: {fileID: 700643566047416527, guid: d5abc895c284ea44aaf79bc56af78601,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8500253
+      value: 6.233864
       objectReference: {fileID: 0}
     - target: {fileID: 700643566047416527, guid: d5abc895c284ea44aaf79bc56af78601,
         type: 3}
@@ -53372,12 +53372,12 @@ PrefabInstance:
     - target: {fileID: 700643566047416527, guid: d5abc895c284ea44aaf79bc56af78601,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.73
+      value: 6.8196
       objectReference: {fileID: 0}
     - target: {fileID: 700643566047416527, guid: d5abc895c284ea44aaf79bc56af78601,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.56
+      value: -9.4705
       objectReference: {fileID: 0}
     - target: {fileID: 700643566047416527, guid: d5abc895c284ea44aaf79bc56af78601,
         type: 3}
@@ -53458,7 +53458,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -77952176, guid: 9589500635eeaef4fa211db6fa452780,
+      objectReference: {fileID: -1886608060, guid: c785ecbd032ade243aaf124f28dc9ac0,
         type: 3}
     - target: {fileID: 4751458998794419364, guid: d5abc895c284ea44aaf79bc56af78601,
         type: 3}
@@ -53558,6 +53558,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2138583365}
+    - targetCorrespondingSourceObject: {fileID: 6358416819729956247, guid: d5abc895c284ea44aaf79bc56af78601,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2138583366}
   m_SourcePrefab: {fileID: 100100000, guid: d5abc895c284ea44aaf79bc56af78601, type: 3}
 --- !u!1 &2100020448
 GameObject:
@@ -66936,7 +66940,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 2.9375}
+    oldSize: {x: 0.48, y: 0.47}
     newSize: {x: 4.5384617, y: 4}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -66944,21 +66948,54 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.13478063, y: 1.5111487}
-      - {x: -0.22956724, y: 1.4942299}
-      - {x: -0.47043264, y: 1.4630109}
-      - {x: -1.0832373, y: 1.2306314}
-      - {x: -1.5000001, y: 0.623861}
-      - {x: -1.5192282, y: -0.48291865}
-      - {x: -1.3092427, y: -0.95768267}
-      - {x: -0.65630496, y: -1.4120551}
-      - {x: 0.7248008, y: -1.4191743}
-      - {x: 0.99782836, y: -1.3440211}
-      - {x: 1.518167, y: -0.7593853}
-      - {x: 1.4879811, y: 0.59829134}
-      - {x: 1.2435642, y: 0.9949048}
-      - {x: 0.69155383, y: 1.4007164}
+    - - {x: 0.2182918, y: 0.14458537}
+      - {x: 0.19268757, y: 0.1759214}
+      - {x: 0.17775095, y: 0.19269137}
+      - {x: 0.17318693, y: 0.19613583}
+      - {x: 0.15002556, y: 0.20767537}
+      - {x: 0.1362429, y: 0.21649519}
+      - {x: 0.13609178, y: 0.21893167}
+      - {x: 0.07453718, y: 0.23817027}
+      - {x: 0.044503834, y: 0.23858853}
+      - {x: -0.051418565, y: 0.23944117}
+      - {x: -0.09515779, y: 0.23504099}
+      - {x: -0.11502155, y: 0.23305114}
+      - {x: -0.13051923, y: 0.22912423}
+      - {x: -0.14435679, y: 0.22350277}
+      - {x: -0.144393, y: 0.22326118}
+      - {x: -0.14807245, y: 0.21987231}
+      - {x: -0.24549899, y: 0.102742754}
+      - {x: -0.24278964, y: -0.13512364}
+      - {x: -0.090242095, y: -0.24047786}
+      - {x: 0.074752614, y: -0.23715611}
+      - {x: 0.16621248, y: -0.23386656}
+      - {x: 0.24245104, y: -0.12152939}
+      - {x: 0.24262264, y: 0.08688407}
+      - {x: 0.23635106, y: 0.0992619}
+      - {x: 0.22754617, y: 0.12023737}
+      - {x: 0.22825485, y: 0.11881822}
   m_UseDelaunayMesh: 0
+--- !u!95 &2138583366
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138583363}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 374d3898353fc7b4f8d0c989251823bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
