@@ -45,6 +45,12 @@ TagManager:
   - name: Background
     uniqueID: 2087213285
     locked: 0
+  - name: Antorch
+    uniqueID: 1656240331
+    locked: 0
+  - name: Lights
+    uniqueID: 541163935
+    locked: 0
   - name: trunks
     uniqueID: 1993540551
     locked: 0
