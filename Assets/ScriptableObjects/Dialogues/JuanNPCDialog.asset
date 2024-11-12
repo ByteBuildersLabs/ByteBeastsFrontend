@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e69b088fa2c249d1b4fded259b71b5c, type: 3}
+  m_Name: JuanNPCDialog
+  m_EditorClassIdentifier: 
+  npcName: Juan
+  npcIcon: {fileID: 21300000, guid: 72b7fa761a6e85542bc5c75bcf7b4386, type: 3}
+  hasInteraction: 0
+  npcInteractionType: 0
+  Greeting: Helloooo!
+  Conversation:
+  - Dialogue: 'I''ve heard rumors that the Scholars'' Sanctum is researching a new
+      essence... '
+  - Dialogue: something beyond the five elementals. Imagine having a ByteBeast with
+      such unique power!
+  - Dialogue: Want some advice? In the Grand Arena, it's not just about the ByteBeast's
+      strength...
+  - Dialogue: but the connection you have with it. If you achieve that, you can win
+      any battle...
+  - Dialogue: Margareth and Yuliana say that shadow crystals can corrupt a ByteBeast..
+  - Dialogue: but I think those are just superstitions. A good Tamer can handle it,
+      right?
+  - Dialogue: Want some advice? In the Grand Arena, it's not just about the ByteBeast's
+      strength..
+  - Dialogue: ' but the connection you have with it. If you achieve that, you can
+      win any battle...'
+  GoodBye: Bye bye! good luck
