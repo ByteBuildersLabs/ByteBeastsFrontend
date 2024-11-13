@@ -1481,11 +1481,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.98
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.4
+      value: -4.98
       objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1509,19 +1509,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4469010750423286, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.53
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4469010750423286, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.08
+      value: 3.89
       objectReference: {fileID: 0}
     - target: {fileID: 4469010750423286, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.1664823
       objectReference: {fileID: 0}
+    - target: {fileID: 61028343127646202, guid: 64d2c8884948e1d4d82cda544b880100,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.1184704
+      objectReference: {fileID: 0}
+    - target: {fileID: 61028343127646202, guid: 64d2c8884948e1d4d82cda544b880100,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.1316092
+      objectReference: {fileID: 0}
+    - target: {fileID: 61028343127646202, guid: 64d2c8884948e1d4d82cda544b880100,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03416884
+      objectReference: {fileID: 0}
+    - target: {fileID: 61028343127646202, guid: 64d2c8884948e1d4d82cda544b880100,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.4441954
+      objectReference: {fileID: 0}
     - target: {fileID: 114882825115530484, guid: 64d2c8884948e1d4d82cda544b880100,
         type: 3}
       propertyPath: areaToLoad
+      value: Town
+      objectReference: {fileID: 0}
+    - target: {fileID: 114882825115530484, guid: 64d2c8884948e1d4d82cda544b880100,
+        type: 3}
+      propertyPath: areaTransitionName
       value: Town
       objectReference: {fileID: 0}
     m_RemovedComponents: []
