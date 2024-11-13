@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e69b088fa2c249d1b4fded259b71b5c, type: 3}
+  m_Name: MargarethNPCDialog
+  m_EditorClassIdentifier: 
+  npcName: Margareth
+  npcIcon: {fileID: 21300000, guid: 50da7a89dd8129649b53dd4b6802b6c1, type: 3}
+  hasInteraction: 0
+  npcInteractionType: 0
+  Greeting: '    GM!'
+  Conversation:
+  - Dialogue: '   Oh, young one, where are you rushing off to?'
+  - Dialogue: '   In calmness and knowledge lies a Tamer''s true strength.'
+  - Dialogue: '   Be careful in the Dark Forest... '
+  - Dialogue: '   They say the shadow ByteBeasts...'
+  - Dialogue: '   there aren''t kind to those who don''t belong to their essence...'
+  - Dialogue: '   Take this... a small amulet of light. It may protect you if needed.'
+  - Dialogue: '   The Digital Nexus is a place where hearts and essences intertwine...'
+  - Dialogue: '   Do not underestimate the energy that flows here. It''s as alive
+      as any ByteBeast.'
+  GoodBye: '   Bye!'
