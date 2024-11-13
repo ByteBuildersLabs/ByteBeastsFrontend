@@ -277,6 +277,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: OnlyWall
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 288
+        width: 132
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaf72d97646884f1a99b4afdba18dc8d
+      internalID: -1994745827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -288,6 +309,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      OnlyWall: -1994745827
       WallsD_1: 654874269
       WallsD_2: -1569115736
       WallsD_3_1: 1096232208

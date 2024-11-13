@@ -32,4 +32,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DarkForest.unity
     guid: cd8c86dea6cbf0045a393f217b254123
+  - enabled: 1
+    path: Assets/Scenes/House1.unity
+    guid: dfe630f44220d4ced81d4dc9d2a8bdad
+  - enabled: 0
+    path: Assets/Scenes/House2.unity
+    guid: 73b509644384f46e7bcb61847035c698
+  - enabled: 0
+    path: Assets/Scenes/House3.unity
+    guid: b92df2987a0e14cc8a69ad0a25f7839f
+  - enabled: 0
+    path: Assets/Scenes/House4.unity
+    guid: 0c32495a53a4f4d7bb07208578f0538f
+  - enabled: 0
+    path: Assets/Scenes/House5.unity
+    guid: 7eccdd9c38bdb4d3ebb9a3a038dbaf0b
+  - enabled: 0
+    path: Assets/Scenes/House6.unity
+    guid: 318d0c072ba424569a72bb3749cc4cd1
+  - enabled: 0
+    path: Assets/Scenes/House7.unity
+    guid: dac2f01dccf3b42f4896281433e3532b
   m_configObjects: {}
