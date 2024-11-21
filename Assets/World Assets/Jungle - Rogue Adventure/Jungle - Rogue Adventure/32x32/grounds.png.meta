@@ -8552,7 +8552,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_402
+      name: cave-ground-1
       rect:
         serializedVersion: 2
         x: 416
@@ -8573,7 +8573,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_403
+      name: cave-ground-2
       rect:
         serializedVersion: 2
         x: 432
@@ -8594,7 +8594,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_404
+      name: cave-ground-3
       rect:
         serializedVersion: 2
         x: 448
@@ -8615,7 +8615,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_405
+      name: cave-ground-4
       rect:
         serializedVersion: 2
         x: 464
@@ -8636,7 +8636,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_406
+      name: cave-ground-5
       rect:
         serializedVersion: 2
         x: 480
@@ -8657,7 +8657,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_407
+      name: cave-ground-6
       rect:
         serializedVersion: 2
         x: 496
@@ -9308,7 +9308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_438
+      name: cave-ground-19
       rect:
         serializedVersion: 2
         x: 416
@@ -9413,7 +9413,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_443
+      name: cave-ground-7
       rect:
         serializedVersion: 2
         x: 496
@@ -9938,10 +9938,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_468
+      name: cave-ground-18
       rect:
         serializedVersion: 2
-        x: 416
+        x: 417
         y: 208
         width: 16
         height: 16
@@ -10001,7 +10001,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_471
+      name: cave-ground-8
       rect:
         serializedVersion: 2
         x: 496
@@ -10442,10 +10442,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_492
+      name: cave-ground-17
       rect:
         serializedVersion: 2
-        x: 416
+        x: 417
         y: 192
         width: 16
         height: 16
@@ -10505,7 +10505,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_495
+      name: cave-ground-
       rect:
         serializedVersion: 2
         x: 496
@@ -11072,7 +11072,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_522
+      name: cave-ground-16
       rect:
         serializedVersion: 2
         x: 416
@@ -11177,7 +11177,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_527
+      name: cave-ground-9
       rect:
         serializedVersion: 2
         x: 496
@@ -11828,7 +11828,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_558
+      name: cave-ground-15
       rect:
         serializedVersion: 2
         x: 416
@@ -11849,7 +11849,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_559
+      name: cave-ground-14
       rect:
         serializedVersion: 2
         x: 432
@@ -11870,7 +11870,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_560
+      name: cave-ground-13
       rect:
         serializedVersion: 2
         x: 448
@@ -11891,10 +11891,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_561
+      name: cave-ground-12
       rect:
         serializedVersion: 2
-        x: 464
+        x: 465
         y: 160
         width: 16
         height: 16
@@ -11912,7 +11912,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_562
+      name: cave-ground-11
       rect:
         serializedVersion: 2
         x: 480
@@ -11933,7 +11933,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_563
+      name: cave-ground-10
       rect:
         serializedVersion: 2
         x: 496
@@ -13109,7 +13109,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_619
+      name: cave-ground-20
       rect:
         serializedVersion: 2
         x: 432
@@ -13130,7 +13130,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_620
+      name: cave-ground-21
       rect:
         serializedVersion: 2
         x: 448
@@ -13151,7 +13151,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_621
+      name: cave-ground-22
       rect:
         serializedVersion: 2
         x: 464
@@ -13172,7 +13172,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_622
+      name: cave-ground-23
       rect:
         serializedVersion: 2
         x: 480
@@ -13865,7 +13865,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_655
+      name: cave-ground-30
       rect:
         serializedVersion: 2
         x: 432
@@ -13886,7 +13886,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_656
+      name: cave-ground-31
       rect:
         serializedVersion: 2
         x: 448
@@ -13928,7 +13928,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_658
+      name: cave-ground-24
       rect:
         serializedVersion: 2
         x: 480
@@ -14621,7 +14621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_691
+      name: cave-ground-29
       rect:
         serializedVersion: 2
         x: 432
@@ -14684,7 +14684,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_694
+      name: cave-ground-25
       rect:
         serializedVersion: 2
         x: 480
@@ -15377,7 +15377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_727
+      name: cave-ground-28
       rect:
         serializedVersion: 2
         x: 432
@@ -15398,7 +15398,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_728
+      name: cave-ground-27
       rect:
         serializedVersion: 2
         x: 448
@@ -15419,7 +15419,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: grounds_729
+      name: cave-ground-26
       rect:
         serializedVersion: 2
         x: 464
@@ -17256,6 +17256,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      cave-ground-: 274509512
+      cave-ground-1: 122854363
+      cave-ground-10: -1964212100
+      cave-ground-11: 597237014
+      cave-ground-12: 1270529206
+      cave-ground-13: 1595875219
+      cave-ground-14: 2098451316
+      cave-ground-15: -846922836
+      cave-ground-16: -1447284945
+      cave-ground-17: 1016720150
+      cave-ground-18: -618358753
+      cave-ground-19: -667422073
+      cave-ground-2: -1727165345
+      cave-ground-20: -814216632
+      cave-ground-21: 1824463985
+      cave-ground-22: 1397786573
+      cave-ground-23: -439750971
+      cave-ground-24: 1954714827
+      cave-ground-25: 1217202408
+      cave-ground-26: 1865345965
+      cave-ground-27: 23779742
+      cave-ground-28: 444692489
+      cave-ground-29: 970245581
+      cave-ground-3: 1571685461
+      cave-ground-30: -941359898
+      cave-ground-31: -182397267
+      cave-ground-4: -326172265
+      cave-ground-5: 185309022
+      cave-ground-6: -1993391562
+      cave-ground-7: -1935625204
+      cave-ground-8: -1107334734
+      cave-ground-9: 1112738932
       cornerDownRight: 1006381737
       cornerDownleft: -601622152
       cornerUpLeft: 906850161
@@ -17588,12 +17620,6 @@ TextureImporter:
       grounds_40: 1204418266
       grounds_400: 228173490
       grounds_401: 959923433
-      grounds_402: 122854363
-      grounds_403: -1727165345
-      grounds_404: 1571685461
-      grounds_405: -326172265
-      grounds_406: 185309022
-      grounds_407: -1993391562
       grounds_408: 1415341572
       grounds_409: -748724301
       grounds_41: 1438338097
@@ -17627,13 +17653,11 @@ TextureImporter:
       grounds_435: 34368673
       grounds_436: -1232601873
       grounds_437: 509681479
-      grounds_438: -667422073
       grounds_439: 936211978
       grounds_44: -1789609495
       grounds_440: -782199249
       grounds_441: -1890229813
       grounds_442: 455749524
-      grounds_443: -1935625204
       grounds_444: 1740695342
       grounds_445: 185432729
       grounds_446: -597116089
@@ -17660,11 +17684,9 @@ TextureImporter:
       grounds_465: 1803203484
       grounds_466: 1427128591
       grounds_467: -103360621
-      grounds_468: -618358753
       grounds_469: 751594736
       grounds_47: 391737629
       grounds_470: 1627238095
-      grounds_471: -1107334734
       grounds_472: -1003757647
       grounds_473: 824343430
       grounds_474: -434798946
@@ -17687,10 +17709,8 @@ TextureImporter:
       grounds_49: 533310126
       grounds_490: 311386799
       grounds_491: 292179906
-      grounds_492: 1016720150
       grounds_493: -448686033
       grounds_494: -1879144321
-      grounds_495: 274509512
       grounds_496: -824479515
       grounds_497: -806518203
       grounds_498: 1014304557
@@ -17721,12 +17741,10 @@ TextureImporter:
       grounds_52: -385051627
       grounds_520: 996600717
       grounds_521: -73053639
-      grounds_522: -1447284945
       grounds_523: -1628969702
       grounds_524: 864790396
       grounds_525: 171973928
       grounds_526: 651104657
-      grounds_527: 1112738932
       grounds_528: 422259218
       grounds_529: -1225856808
       grounds_53: -145338851
@@ -17760,13 +17778,7 @@ TextureImporter:
       grounds_555: 1542331959
       grounds_556: 1503830387
       grounds_557: 6013072
-      grounds_558: -846922836
-      grounds_559: 2098451316
       grounds_56: -1134986712
-      grounds_560: 1595875219
-      grounds_561: 1270529206
-      grounds_562: 597237014
-      grounds_563: -1964212100
       grounds_564: -1698558743
       grounds_565: -1456831913
       grounds_566: -1790871232
@@ -17828,11 +17840,7 @@ TextureImporter:
       grounds_616: 1086177136
       grounds_617: 1820432678
       grounds_618: -540336978
-      grounds_619: -814216632
       grounds_62: -1778110970
-      grounds_620: 1824463985
-      grounds_621: 1397786573
-      grounds_622: -439750971
       grounds_623: -703107744
       grounds_624: 1936551615
       grounds_625: -903476196
@@ -17868,10 +17876,7 @@ TextureImporter:
       grounds_652: 604314989
       grounds_653: 1448554510
       grounds_654: -1137870855
-      grounds_655: -941359898
-      grounds_656: -182397267
       grounds_657: 1433164686
-      grounds_658: 1954714827
       grounds_659: -2130214233
       grounds_66: -1972001987
       grounds_660: -986375988
@@ -17908,10 +17913,8 @@ TextureImporter:
       grounds_689: -1892323373
       grounds_69: 1530521904
       grounds_690: 546824378
-      grounds_691: 970245581
       grounds_692: -205495530
       grounds_693: -1885074671
-      grounds_694: 1217202408
       grounds_695: -1990398572
       grounds_696: -1091923740
       grounds_697: 2071687703
@@ -17948,9 +17951,6 @@ TextureImporter:
       grounds_724: -754112971
       grounds_725: 1248564654
       grounds_726: -1634982042
-      grounds_727: 444692489
-      grounds_728: 23779742
-      grounds_729: 1865345965
       grounds_73: 2006077904
       grounds_730: 1442250654
       grounds_731: 1147275614
