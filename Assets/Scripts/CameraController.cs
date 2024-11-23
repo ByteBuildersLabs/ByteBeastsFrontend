@@ -34,8 +34,8 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         // Set the target to be the player object
-        target = PlayerController.instance.transform;
-        // target = FindObjectOfType<PlayerController>().transform;
+        // target = PlayerController.instance.transform;
+        target = FindObjectOfType<PlayerController>().transform;
 
         // Calculate the half-height and half-width of the camera's view
         halfHeight = Camera.main.orthographicSize;
