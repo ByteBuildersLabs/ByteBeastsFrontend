@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// This script manages the entrance to an area in the game.
@@ -25,6 +26,12 @@ public class AreaEntrance : MonoBehaviour {
             PlayerController.instance.transform.position = transform.position;
         }
 
+		// Overwrite player's position if it exists in PlayerPrefs
+		if ( SceneManager.GetActiveScene().name == "Town" && LoadEntrancePositionFromPlayerPrefs() != Vector3.zero) {
+            PlayerController.instance.transform.position = LoadEntrancePositionFromPlayerPrefs();
+			PlayerController.lastHouseEntered = Vector3.zero;
+		}
+
 		// Fade out the black screen
         UIFade.instance.FadeFromBlack();
 
@@ -40,4 +47,20 @@ public class AreaEntrance : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public static Vector3 LoadEntrancePositionFromPlayerPrefs()
+    {
+        if (PlayerPrefs.HasKey($"entrancePosition_x"))
+        {
+            float x = PlayerPrefs.GetFloat("entrancePosition_x");
+            float y = PlayerPrefs.GetFloat("entrancePosition_y");
+            float z = PlayerPrefs.GetFloat("entrancePosition_z");
+            return new Vector3(x, y, z);
+        }
+        else
+        {
+            Debug.LogWarning($"No Vector3 data found in PlayerPrefs for entrancePosition");
+            return Vector3.zero;
+        }
+    }
 }

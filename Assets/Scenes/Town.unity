@@ -1821,6 +1821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area Exit (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -4620,7 +4624,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1815508899592074, guid: f2d3c32235d5bb747bea5c98642bf77d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4618796693575320, guid: f2d3c32235d5bb747bea5c98642bf77d, type: 3}
       propertyPath: m_RootOrder
@@ -6000,6 +6004,10 @@ PrefabInstance:
     - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_Name
       value: Area Exit (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_RootOrder
@@ -21210,6 +21218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area Exit (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -33629,6 +33641,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Area Exit (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -35333,6 +35349,10 @@ PrefabInstance:
     - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_Name
       value: Area Exit (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_RootOrder
@@ -38266,6 +38286,10 @@ PrefabInstance:
     - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_Name
       value: Area Exit (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_RootOrder
@@ -42961,6 +42985,10 @@ PrefabInstance:
     - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_Name
       value: Area Exit (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1854250573537122, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4389018930797044, guid: 64d2c8884948e1d4d82cda544b880100, type: 3}
       propertyPath: m_RootOrder
