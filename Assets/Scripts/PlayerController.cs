@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
+using System;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     /// <value>
     /// Reference to the Rigidbody2D component attached to the player object.
@@ -55,7 +58,12 @@ public class PlayerController : MonoBehaviour {
     /// </value>
     private bool isMoving = false;
 
-	/// <summary>
+    /// <summary>
+    /// Stores the transform of the entrance of the last house entered, for retrieval when exiting a house. 
+    /// </summary>
+    public static Vector3 lastHouseEntered = Vector3.zero;
+
+    /// <summary>
     /// Called when the script is instantiated.
     /// Initializes the singleton instance and ensures the GameObject isn't destroyed when loading new scenes.
     /// </summary>
@@ -74,9 +82,10 @@ public class PlayerController : MonoBehaviour {
         }
 
         DontDestroyOnLoad(gameObject);
+
     }
 
-	/// <summary>
+    /// <summary>
     /// Called when the script starts execution.
     /// Initializes the FixedJoystick component based on the platform.
     /// </summary>
@@ -87,9 +96,11 @@ public class PlayerController : MonoBehaviour {
 #if UNITY_STANDALONE_WIN
              joystick.gameObject.SetActive(false);
 #endif
+
     }
 
-	/// <summary>
+
+    /// <summary>
     /// Called every frame after Start().
     /// Handles player movement and animation based on input.
     /// </summary>
@@ -97,10 +108,10 @@ public class PlayerController : MonoBehaviour {
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        #if UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
-            horizontal = joystick.Horizontal;
-            vertical = joystick.Vertical;
-        #endif
+#if UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
+        horizontal = joystick.Horizontal;
+        vertical = joystick.Vertical;
+#endif
 
         if (canMove)
         {
@@ -126,7 +137,7 @@ public class PlayerController : MonoBehaviour {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
     }
 
-	/// <summary>
+    /// <summary>
     /// Sets the bounds of the playable area.
     /// </summary>
     /// <param name="botLeft">Bottom-left corner of the area.</param>
@@ -137,14 +148,14 @@ public class PlayerController : MonoBehaviour {
         topRightLimit = topRight + new Vector3(-.5f, -1f, 0f);
     }
 
-	/// <summary>
+    /// <summary>
     /// Activates or deactivates the FixedJoystick component based on the platform.
     /// </summary>
     /// <param name="val">True to activate, false to deactivate.</param>
     public void ActivateJoystick(bool val)
     {
-        #if UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
-            joystick.gameObject.SetActive(val);
-        #endif
+#if UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
+        joystick.gameObject.SetActive(val);
+#endif
     }
 }
