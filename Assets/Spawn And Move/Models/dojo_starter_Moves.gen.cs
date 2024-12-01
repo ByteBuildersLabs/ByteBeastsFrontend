@@ -25,7 +25,7 @@ public abstract record Direction() : Enum {
 
 
 // Model definition for `dojo_examples::models::Moves` model
-public class ns_Moves : ModelInstance {
+public class dojo_starter_Moves : ModelInstance {
     [ModelField("player")]
     public FieldElement player;
 

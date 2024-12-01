@@ -23,7 +23,7 @@ public struct Vec2 {
 
 
 // Model definition for `dojo_examples::models::Position` model
-public class ns_Position : ModelInstance {
+public class dojo_starter_Position : ModelInstance {
     [ModelField("player")]
     public FieldElement player;
 

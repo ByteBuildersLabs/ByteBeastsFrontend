@@ -44,7 +44,7 @@ namespace dojoExample
             burnerManager = new BurnerManager(provider, masterAccount);
 
             worldManager.synchronizationMaster.OnEntitySpawned.AddListener(InitEntity);
-            foreach (var entity in worldManager.Entities<ns_Position>())
+            foreach (var entity in worldManager.Entities<dojo_starter_Position>())
             {
                 InitEntity(entity);
             }
@@ -75,7 +75,7 @@ namespace dojoExample
                 if (hit && hitInfo.transform.parent != null)
                 {
                     var entity = hitInfo.transform.parent;
-                    ns_Position position;
+                    dojo_starter_Position position;
                     entity.TryGetComponent(out position);
 
                     if (position && spawnedAccounts.ContainsValue(entity.name))
@@ -84,7 +84,7 @@ namespace dojoExample
                         if (previousBurner != null)
                         {
                             worldManager.Entity(spawnedAccounts[previousBurner.Address])
-                                .GetComponent<ns_Position>().textTag.color = Color.black;
+                                .GetComponent<dojo_starter_Position>().textTag.color = Color.black;
                         }
 
                         var burner = spawnedAccounts.First(b => b.Value == entity.name);
@@ -123,7 +123,7 @@ namespace dojoExample
         private void InitEntity(GameObject entity)
         {
             // check if entity has position component
-            if (!entity.TryGetComponent(out ns_Position position)) return;
+            if (!entity.TryGetComponent(out dojo_starter_Position position)) return;
 
             var capsule = GameObject.CreatePrimitive(PrimitiveType.Capsule);
             // change color of capsule to a random color
