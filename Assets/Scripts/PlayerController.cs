@@ -63,6 +63,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public static Vector3 lastHouseEntered = Vector3.zero;
 
+    [SerializeField] DojoSpawnAndMoveExecuter dojoSpawnAndMoveExecuter;
+
     /// <summary>
     /// Called when the script is instantiated.
     /// Initializes the singleton instance and ensures the GameObject isn't destroyed when loading new scenes.
@@ -91,6 +93,9 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Start()
     {
+
+        dojoSpawnAndMoveExecuter.SpawnCharacter();
+
         joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FixedJoystick>();
 
 #if UNITY_STANDALONE_WIN
