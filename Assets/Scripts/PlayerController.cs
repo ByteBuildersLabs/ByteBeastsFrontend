@@ -84,7 +84,13 @@ public class PlayerController : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+        dojoSpawnAndMoveExecuter.currentPositionChange += Handle_positionChange;
 
+    }
+
+    private void Handle_positionChange(Vector2Int pos)
+    {
+        transform.position = new Vector3(pos.x, pos.y, transform.position.z);
     }
 
     /// <summary>
@@ -137,6 +143,23 @@ public class PlayerController : MonoBehaviour
                 myAnim.SetFloat("lastMoveX", horizontal);
                 myAnim.SetFloat("lastMoveY", vertical);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            dojoSpawnAndMoveExecuter.Move(new Direction.Down());
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            dojoSpawnAndMoveExecuter.Move(new Direction.Left());
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            dojoSpawnAndMoveExecuter.Move(new Direction.Up());
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            dojoSpawnAndMoveExecuter.Move(new Direction.Right());
         }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
