@@ -63,6 +63,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public static Vector3 lastHouseEntered = Vector3.zero;
 
+    [SerializeField] DojoSpawnAndMoveExecuter dojoSpawnAndMoveExecuter;
+
     /// <summary>
     /// Called when the script is instantiated.
     /// Initializes the singleton instance and ensures the GameObject isn't destroyed when loading new scenes.
@@ -82,7 +84,13 @@ public class PlayerController : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+        dojoSpawnAndMoveExecuter.currentPositionChange += Handle_positionChange;
 
+    }
+
+    private void Handle_positionChange(Vector2Int pos)
+    {
+        transform.position = new Vector3(pos.x, pos.y, transform.position.z);
     }
 
     /// <summary>
@@ -91,6 +99,9 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Start()
     {
+
+        dojoSpawnAndMoveExecuter.SpawnCharacter();
+
         joystick = GameObject.FindGameObjectWithTag("Joystick").GetComponent<FixedJoystick>();
 
 #if UNITY_STANDALONE_WIN
@@ -132,6 +143,23 @@ public class PlayerController : MonoBehaviour
                 myAnim.SetFloat("lastMoveX", horizontal);
                 myAnim.SetFloat("lastMoveY", vertical);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            dojoSpawnAndMoveExecuter.Move(new Direction.Down());
+        }
+        else if (Input.GetKeyDown(KeyCode.A))
+        {
+            dojoSpawnAndMoveExecuter.Move(new Direction.Left());
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
+        {
+            dojoSpawnAndMoveExecuter.Move(new Direction.Up());
+        }
+        else if (Input.GetKeyDown(KeyCode.D))
+        {
+            dojoSpawnAndMoveExecuter.Move(new Direction.Right());
         }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x), Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y), transform.position.z);
