@@ -28,9 +28,3 @@ _Example: "Add a search bar to the dashboard to improve user navigation."_
 ### Contribution Guidelines
 
 - Please ensure you read and follow the contribution guidelines in the project's [README](https://github.com/ByteBuildersLabs/ByteBeastsFrontend/blob/main/README.md) file
-
-### ✅ Checklist
-
-- [ ] I have read the contribution guidelines
-- [ ] I have checked for existing issues to avoid duplication
-- [ ] My proposed solution aligns with the project's objectives
