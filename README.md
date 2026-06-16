@@ -5,7 +5,7 @@ This is the Unity Frontend for ByteBeasts
 
 Thank you for considering contributing to this project! We appreciate your time and effort in improving our work. Below are the guidelines to help you contribute effectively, but first, join to our [Telegram](https://t.me/+-84e2pqLtqNkZDAx) contributors group.
 
-To request issues please explain your background and how to resolve the issue, as well as give an estimate of the time it would take to resolve the issue.
+To request issues please explain your background and how to resolve the issue, as well as give an estimate of the time it would take to resolve the issue. MONEYYY
 
 ### OnlyDust
 For ODHacks we will only take into account issue requests that are made through [OnlyDust](https://app.onlydust.com/p/bytebeasts) and that really show how to resolve the issue. Single line comments will be ignored.
